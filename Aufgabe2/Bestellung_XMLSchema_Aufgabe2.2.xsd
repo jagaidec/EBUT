@@ -3,13 +3,13 @@
 	<xs:element name="Bestelung">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="Betsellkopf"></xs:element>
+				<xs:element ref="Bestellkopf"></xs:element>
 				<xs:element ref="Bestellrumpf"></xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	
-	<xs:element name="Betsellkopf">
+	<xs:element name="Bestellkopf">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="Besteller"></xs:element>
@@ -24,8 +24,22 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Kunde" type="xs:string"></xs:element>
-				<xs:element id="" ??????????????
+				<xs:element ref="FirmenIdentifikationsnummer"></xs:element>
 			</xs:sequence>
 		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="FirmenIdentifikationsnummer">
+		<xs:complexType>
+			<xs:anyAttribute>
+				<xs:annotation id="FirmenID">
+				</xs:annotation>
+			</xs:anyAttribute>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="Bestellrumpf">
+		
 	</xs:element>
 </xs:schema>
