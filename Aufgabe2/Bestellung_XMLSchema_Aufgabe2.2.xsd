@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Bestelung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Betsellkopf"></xs:element>
+				<xs:element ref="Bestellrumpf"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Betsellkopf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Besteller"></xs:element>
+				<xs:element name="Datum" type="xs:string"></xs:element>
+				<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"></xs:element>
+				<xs:element name="Lieferadresse" type="xs:string" minOccurs="1"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Besteller">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Kunde" type="xs:string"></xs:element>
+				<xs:element id="" ??????????????
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
