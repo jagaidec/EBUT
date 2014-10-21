@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % preis "(Brutto | Netto)">
+
 <!ELEMENT Produktkatalog (Header, Artikel+)>
-<!ELEMENT Header (Generierungsdatum, Name, Beschreibung?)>
-<!ELEMENT Generierungsdatum (#PCDATA)>
-<!ELEMENT Name (#PCDATA)> <!--maximal Länge 50-->
-<!ELEMENT Beschreibung (#PCDATA)><!--maximal Länge 100-->
-<!ELEMENT Artikel (Kurzbeschreibung, Hersteller?, zusatz_ArtikelNr?, Langbeschreibung?,Preis, Artikel?)>
-<!ENTITY % preis "(Butto | Netto)">
-<!ELEMENT Preis %preis;>
-<!ELEMENT Brutto (Kürzel, LandesKürzel, Steuersatz)>
-<!ELEMENT Netto (Kürzel, LandesKürzel, Steuersatz)>
-<!ATTLIST Kürzel Währung ( EUR | USD | CHF | GBP) "EUR">
-<!ELEMENT LandesKürzel (#PCDATA)> <!--maximal Länge 3-->
-<!ELEMENT Steuersatz (double)>
-<!ATTLIST Artikel ArtikelNr ID #REQUIRED>
-<!ELEMENT Kurzbeschreibung (#PCDATA)> <!--maximal Länge 80-->
-<!ELEMENT Hersteller (#PCDATA)> <!--maximal Länge 50-->
-<!ELEMENT zusatz_ArtikelNr (#PCDATA)> <!--maximal Länge 50-->
-<!ELEMENT Langbeschreibung (#PCDATA | Wichtig)*> <!--maximal Länge 50-->
-<!--<!Element Wichtig (#PCDATA)>-->
+	<!ELEMENT Header (Generierungsdatum, Name, Beschreibung?)>
+		<!ELEMENT Generierungsdatum (#PCDATA)>
+		<!ELEMENT Name (#PCDATA)><!--maximal Länge 50-->
+		<!ELEMENT Beschreibung (#PCDATA)><!--maximal Länge 100-->
+		
+	<!ELEMENT Artikel (Kurzbeschreibung, Hersteller?, zusatz_ArtikelNr?, Langbeschreibung?, Preis, Artikel?)>
+		<!ELEMENT Kurzbeschreibung (#PCDATA)><!--maximal Länge 80-->
+		<!ELEMENT Hersteller (#PCDATA)><!--maximal Länge 50-->
+		<!ELEMENT zusatz_ArtikelNr (#PCDATA)><!--maximal Länge 50-->
+		<!ELEMENT Langbeschreibung (#PCDATA | Wichtig)*><!--maximal Länge 50--><!--<!Element Wichtig (#PCDATA)>-->
+		<!ELEMENT Preis %preis;>
+			<!ELEMENT Brutto (Kürzel, LandesKürzel, Steuersatz)>
+			<!ELEMENT Netto (Kürzel, LandesKürzel, Steuersatz)>
+				<!ATTLIST Kürzel Währung (EUR | USD | CHF | GBP) "EUR">
+				<!ELEMENT LandesKürzel (#PCDATA)><!--maximal Länge 3-->
+				<!ELEMENT Steuersatz (double)>			
+	<!ATTLIST Artikel ArtikelNr ID #REQUIRED>
+
+
 
 
