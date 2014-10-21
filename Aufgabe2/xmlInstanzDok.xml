@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML-Beispieldatei von XMLSpy generiert v2015 sp1 (http://www.altova.com)-->
+<!DOCTYPE Produktkatalog SYSTEM "Aufgabe2.1.dtd">
+<Produktkatalog>
+	<Header>
+		<Generierungsdatum>text</Generierungsdatum>
+		<Name>text</Name>
+	</Header>
+	<Artikel ArtikelNr="ID1">
+		<Kurzbeschreibung>text</Kurzbeschreibung>
+		<Preis>
+			<Brutto>
+				<Kürzel>text</Kürzel>
+				<LandesKürzel>text</LandesKürzel>
+				<Steuersatz>text</Steuersatz>
+			</Brutto>
+		</Preis>
+	</Artikel>
+</Produktkatalog>
