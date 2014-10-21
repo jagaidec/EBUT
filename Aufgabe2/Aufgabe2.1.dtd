@@ -13,11 +13,13 @@
 		<!ELEMENT zusatz_ArtikelNr (#PCDATA)><!--maximal Länge 50-->
 		<!ELEMENT Langbeschreibung (#PCDATA | Wichtig)*><!--maximal Länge 50--><!--<!Element Wichtig (#PCDATA)>-->
 		<!ELEMENT Preis %preis;>
-			<!ELEMENT Brutto (Kürzel, LandesKürzel, Steuersatz)>
-			<!ELEMENT Netto (Kürzel, LandesKürzel, Steuersatz)>
+			<!ELEMENT Brutto (DerPreis, Kürzel, LandesKürzel, Steuersatz)>
+			<!ELEMENT Netto (DerPreis, Kürzel, LandesKürzel, Steuersatz)>
+				<!ELEMENT DerPreis (#PCDATA)>
+				<!ELEMENT Kürzel (#PCDATA)>
 				<!ATTLIST Kürzel Währung (EUR | USD | CHF | GBP) "EUR">
 				<!ELEMENT LandesKürzel (#PCDATA)><!--maximal Länge 3-->
-				<!ELEMENT Steuersatz (double)>			
+				<!ELEMENT Steuersatz (#PCDATA)>			
 	<!ATTLIST Artikel ArtikelNr ID #REQUIRED>
 
 
