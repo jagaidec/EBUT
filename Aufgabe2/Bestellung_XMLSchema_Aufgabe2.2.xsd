@@ -3,43 +3,52 @@
 	<xs:element name="Bestelung">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="Bestellkopf"></xs:element>
-				<xs:element ref="Bestellrumpf"></xs:element>
+				<xs:element ref="Bestellkopf"/>
+				<xs:element ref="Bestellrumpf"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
 	<xs:element name="Bestellkopf">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="Besteller"></xs:element>
-				<xs:element name="Datum" type="xs:string"></xs:element>
-				<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"></xs:element>
-				<xs:element name="Lieferadresse" type="xs:string" minOccurs="1"></xs:element>
+				<xs:element ref="Besteller"/>
+				<xs:element name="Datum" type="xs:string"/>
+				<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Lieferadresse" minOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
 	<xs:element name="Besteller">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Kunde" type="xs:string"></xs:element>
-				<xs:element ref="FirmenIdentifikationsnummer"></xs:element>
+				<xs:element name="Kunde" type="xs:string"/>
+				<xs:element ref="FirmenIdentifikationsnummer"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
 	<xs:element name="FirmenIdentifikationsnummer">
 		<xs:complexType>
-			<xs:anyAttribute>
-				<xs:annotation id="FirmenID">
-				</xs:annotation>
-			</xs:anyAttribute>
+			<xs:annotation id="FirmenID"/>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="Lieferadresse" type="xs:string" id="LieferadresseID"></xs:element>
 	
-	
+	<!-- .............................................................................................................................................. -->
 	<xs:element name="Bestellrumpf">
-		
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Bestellpositionen"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bestellpositionen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bestellnummer" type="xs:string" minOccurs="1"/>
+				<xs:element name="Bestellmenge" type="xs:string"/>
+				<xs:element name="Kurzbeschreibung" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Lieferadresse"/>
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
 </xs:schema>
