@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 sp1 (http://www.altova.com) von Fabian (HTWG) bearbeitet -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Adresse" type="Adresse_Typ"/>
+	<xs:complexType name="Adresse_Typ">
+		<xs:sequence>
+			<xs:element name="Plz" type="xs:string"/>
+			<xs:element name="HausNr" type="xs:string"/>
+			<xs:element name="Straße" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

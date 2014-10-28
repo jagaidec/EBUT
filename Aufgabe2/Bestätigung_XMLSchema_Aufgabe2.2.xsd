@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="adressen.xsd"/>
+	<xs:include schemaLocation="informationen.xsd"/>
+	<xs:element name="Bestellung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Bestellkopf"/>
+				<xs:element ref="Bestellrumpf"/>
+				<xs:element ref="Bestellfuß"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bestellkopf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Besteller"/>
+				<xs:element name="Datum" type="xs:date"/>
+				<xs:element ref="Rechenadresse" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Lieferadresse" minOccurs="1"/>
+				<xs:element ref="Hädlerinformation"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Besteller">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Kunde"/>
+				<xs:element ref="Firmenidentifikation" minOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Kunde" type="Information"/>
+	<xs:element name="Firmenidentifikation">
+		<xs:complexType>
+			<xs:annotation id="FirmenID"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Rechenadresse" type="Adresse_Typ"/>
+	<xs:element name="Lieferadresse" type="Adresse_Typ"/>
+	<xs:element name="Hädlerinformation" type="Information_Typ"/>
+</xs:schema>
