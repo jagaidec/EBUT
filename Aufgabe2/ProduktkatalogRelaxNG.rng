@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<element name="Produktkatalog" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+  	<element name="Header">
+		<element name="Generierungsdatum"> <text/> </element>
+		<element name="Name"><text/></element>
+		<choice>
+			<element name="Beschreibung"><text/> </element>
+		</choice>
+	</element>
+	<oneOrMore>
+		<element name="Artikel">
+			<element name="Kurzbeschreibung"><text/></element>
+			<choice>
+				<element name="Hersteller"><text/></element>
+			</choice>
+						
+		</element>
+	</oneOrMore>
+  </oneOrMore>
+</element>
