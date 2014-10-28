@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Mit XMLSpy v2015 sp1 (http://www.altova.com) von Fabian (HTWG) bearbeitet -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="Information" type="Information_Typ"></xs:element>
-		<xs:complexType name ="Information_Typ">
-			<xs:sequence>
-				<xs:element name="Name" type="xs:string"></xs:element>
-			<xs:element name="Email" type="xs:string"></xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	
+	<xs:element name="Information" type="Information_Typ"/>
+	<xs:complexType name="Information_Typ">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Email" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
-

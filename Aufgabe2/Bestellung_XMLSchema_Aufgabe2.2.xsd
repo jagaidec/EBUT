@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="Bestelung">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="Bestellkopf"/>
-				<xs:element ref="Bestellrumpf"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="Bestellkopf">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="Besteller"/>
-				<xs:element name="Datum" type="xs:string"/>
-				<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"/>
-				<xs:element ref="Lieferadresse" minOccurs="1"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	<xs:include schemaLocation="adressen.xsd"/>
+	<xs:include schemaLocation="informationen.xsd"/>
+	<xs:element name="Bestelung" type="BestellungType"/>
+	<xs:complexType name="BestellungType">
+		<xs:sequence>
+			<xs:element ref="Bestellkopf"/>
+			<xs:element ref="Bestellrumpf"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Bestellkopf" type="BestellkopfTyp"/>
+	<xs:complexType name="BestellkopfTyp">
+		<xs:sequence>
+			<xs:element ref="Besteller"/>
+			<xs:element name="Datum" type="xs:string"/>
+			<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"/>
+			<xs:element ref="Lieferadresse" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:element name="Besteller">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Kunde" type="xs:string"/>
-				<xs:element ref="FirmenIdentifikationsnummer"/>
+				<xs:element ref="Kunde"/>
+				<xs:element ref="Firmenidentifikation" minOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="FirmenIdentifikationsnummer">
+	<xs:element name="Kunde" type="Information_Typ"/>
+	<xs:element name="Firmenidentifikation">
 		<xs:complexType>
 			<xs:annotation id="FirmenID"/>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="Lieferadresse" type="xs:string" id="LieferadresseID"></xs:element>
-	
+	<xs:element name="Rechenadresse" type="Adresse_Typ"/>
+	<xs:element name="Lieferadresse" type="Adresse_Typ"/>
 	<!-- .............................................................................................................................................. -->
-	<xs:element name="Bestellrumpf">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="Bestellpositionen"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	<xs:element name="Bestellrumpf" type="BestellrumpfTyp"/>
+	<xs:complexType name="BestellrumpfTyp">
+		<xs:sequence>
+			<xs:element ref="Bestellpositionen"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:element name="Bestellpositionen">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Bestellnummer" type="xs:string" minOccurs="1"/>
 				<xs:element name="Bestellmenge" type="xs:string"/>
-				<xs:element name="Kurzbeschreibung" type="xs:string" minOccurs="0"/>
+				<xs:element name="Kurzbeschreibung" type="xs:string" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="Lieferadresse"/>
 			</xs:sequence>
 		</xs:complexType>
