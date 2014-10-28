@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Produktkatalog SYSTEM "Aufgabe2.1.dtd">
-
 <Produktkatalog>
 	<Header>
 		<Generierungsdatum>21.10.2014</Generierungsdatum>
