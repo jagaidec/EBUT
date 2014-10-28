@@ -55,7 +55,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Bestellnummer" type="xs:string" minOccurs="1"/>
-				<xs:element name="Bestellmenge" type="xs:string"/>
+				<xs:element name="Bestellmenge" type="xs:decimal"/>
 				<xs:element name="Kurzbeschreibung" type="xs:string" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="Lieferadresse"/>
 			</xs:sequence>
