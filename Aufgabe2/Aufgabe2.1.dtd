@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT Produktkatalog (Header, Artikel+)>
-<!ELEMENT Header (Generierungsdatum, Name, Beschreibung?)>
-<!ELEMENT Generierungsdatum (#PCDATA)>
-<!ELEMENT Name (#PCDATA)> <!--maximal Länge 50-->
+<!ELEMENT Header (Generierungsdatum, Name_des_Erzeugers, Beschreibung?)>
+<!ELEMENT Generierungsdatum (#PCDATA)> <!-- Datentyp Date-->
+<!ELEMENT Name_des_Erzeugers(#PCDATA)> <!--maximal Länge 50-->
 <!ELEMENT Beschreibung (#PCDATA)><!--maximal Länge 100-->
 <!ELEMENT Artikel (Kurzbeschreibung, Hersteller?, zusatz_ArtikelNr?, Langbeschreibung?,Preis, Artikel?)>
+<!ATTLIST Artikel ArtikelNr ID #REQUIRED>
 <!ENTITY % preis "(Butto | Netto)">
 <!ELEMENT Preis %preis;>
-<!ELEMENT Brutto (Kürzel, LandesKürzel, Steuersatz)>
-<!ELEMENT Netto (Kürzel, LandesKürzel, Steuersatz)>
+<!ELEMENT Brutto (Betrag, Kürzel, LandesKürzel, Steuersatz)>
+<!ELEMENT Netto (Betrag, Kürzel, LandesKürzel, Steuersatz)>
 <!ATTLIST Kürzel Währung ( EUR | USD | CHF | GBP) "EUR">
 <!ELEMENT LandesKürzel (#PCDATA)> <!--maximal Länge 3-->
 <!ELEMENT Steuersatz (double)>
-<!ATTLIST Artikel ArtikelNr ID #REQUIRED>
+<!ELEMENT Betrag (#PCDATA)>
 <!ELEMENT Kurzbeschreibung (#PCDATA)> <!--maximal Länge 80-->
 <!ELEMENT Hersteller (#PCDATA)> <!--maximal Länge 50-->
 <!ELEMENT zusatz_ArtikelNr (#PCDATA)> <!--maximal Länge 50-->
-<!ELEMENT Langbeschreibung (#PCDATA | Wichtig)*> <!--maximal Länge 50-->
-<!--<!Element Wichtig (#PCDATA)>-->
+<!ELEMENT Langbeschreibung (#PCDATA | Wichtig)*> <!--maximal Länge 64000-->
 
 
