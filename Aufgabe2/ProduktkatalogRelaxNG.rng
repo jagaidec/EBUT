@@ -11,10 +11,26 @@
 	<oneOrMore>
 		<element name="Artikel">
 			<element name="Kurzbeschreibung"><text/></element>
-			<choice>
+			<optionalce>
 				<element name="Hersteller"><text/></element>
-			</choice>
-						
+			</optionalce>
+			<oneOrMore>
+				<element name="ZusatzArtikel"><text/></element>
+			</oneOrMore>
+			<choice>
+				<element name="Langbeschreibung"><text/></element>
+			</choice>	
+			<element name="Preis">
+				<choice>
+					<group>
+						<element name="Netto"><value>NETTO</value></element>
+						<element name="Brutto"><value>BRUTTO</value></element>	
+					</group>
+				</choice>
+			</element>
+			<zeroOrMore>
+				<element name="Zubehör"></element>
+			</zeroOrMore>
 		</element>
 	</oneOrMore>
   </oneOrMore>
