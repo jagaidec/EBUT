@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Preis" type="PreisTyp"></xs:element>
+		<xs:complexType name="PreisTyp">
+			<xs:sequence>
+				<xs:element name="Preis"	type="xs:decimal"></xs:element>
+				<xs:element name="BrutteNetto" type="preisAngabe"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	
+	<xs:simpleType name="preisAngabe">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NETTO"></xs:enumeration>
+			<xs:enumeration value="BRUTTO"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="Währung" type="WährungTyp"></xs:element>
+	<xs:simpleType name="WährungTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EUR"></xs:enumeration>
+			<xs:enumeration value="CHF"></xs:enumeration>
+			<xs:enumeration value="USA"></xs:enumeration>
+			<xs:enumeration value="GBP"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

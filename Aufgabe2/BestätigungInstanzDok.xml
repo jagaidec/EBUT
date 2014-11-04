@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML-Beispieldatei von XMLSpy generiert v2015 sp1 (http://www.altova.com)-->
+<Bestellung xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Best%C3%A4tigung_XMLSchema_Aufgabe2.2.xsd">
+	<BestellkopfBesteatigung>
+		<Bestellkopf>
+			<Besteller>
+				<Kunde>
+					<Name>Hans</Name>
+					<Email>Peter</Email>
+				</Kunde>
+				<Firmenidentifikation/>
+			</Besteller>
+			<Datum>28.10.2014</Datum>
+			<Lieferadresse>
+				<Plz>6541664</Plz>
+				<HausNr>5</HausNr>
+				<Straße>Bachweg</Straße>
+			</Lieferadresse>
+		</Bestellkopf>
+		<Hädlerinformation>
+			<Name>Hans AG</Name>
+			<Email>hansi@hansi.com</Email>
+		</Hädlerinformation>
+	</BestellkopfBesteatigung>
+	<BestellrumpfBesteatigung>
+		<Bestellpositionen>
+			<Bestellpositionen>
+				<Bestellnummer>11</Bestellnummer>
+				<Bestellmenge>5</Bestellmenge>
+				<Lieferadresse>
+					<Plz>String</Plz>
+					<HausNr>String</HausNr>
+					<Straße>String</Straße>
+				</Lieferadresse>
+			</Bestellpositionen>
+		</Bestellpositionen>
+		<MengeVerfügbar>100</MengeVerfügbar>
+		<Gesamtpreis>
+			<Preis>25.00</Preis>
+			<BrutteNetto>NETTO</BrutteNetto>
+		</Gesamtpreis>
+	</BestellrumpfBesteatigung>
+	<BestellfußBesteatigung>
+		<Gesamtpreis>
+			<Preis>125.00</Preis>
+			<BrutteNetto>NETTO</BrutteNetto>
+		</Gesamtpreis>
+		<Steuersumme>19.00</Steuersumme>
+		<Währung>EUR</Währung>
+	</BestellfußBesteatigung>
+</Bestellung>
