@@ -3,7 +3,9 @@
 <!ENTITY % informationen "(Name, Email)">
 <!ENTITY elementAdresse SYSTEM "adressElement.dtd">
 <!ENTITY elementInformationen SYSTEM "elementInformationen.dtd">
+
 <!ELEMENT Bestellbestätigung (Bestellkopf, Bestellrumpf, Bestellfuß)>
+
 	<!ELEMENT Betsellkopf (Besteller, Datum, Rechenadresse?, Lieferadresse+, Händlerinformationen)>
 		<!ELEMENT Besteller (Kunde, FirmenIdentifikationsnummer*)>
 			<!ELEMENT Kunde (%informationen;)>

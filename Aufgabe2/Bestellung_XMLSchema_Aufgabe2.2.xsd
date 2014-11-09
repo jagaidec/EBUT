@@ -3,7 +3,16 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="adressen.xsd"/>
 	<xs:include schemaLocation="informationen.xsd"/>
-	<xs:element name="Bestelung" type="BestellungType"/>
+	<xs:element name="Bestelung" type="BestellungType">
+		<xs:key name="LieferadresseKey">
+			<xs:selector xpath="Bestellkopf/Lieferadresse"/>
+			<xs:field xpath="id"/>
+		</xs:key>
+		<xs:keyref name="idFremdKeyLieferadresse" refer="LieferadresseKey">
+			<xs:selector xpath="Bestellrumpf/Bestellpositionen"/>
+			<xs:field xpath="LID"/>
+		</xs:keyref>
+	</xs:element>
 	<xs:complexType name="BestellungType">
 		<xs:sequence>
 			<xs:element ref="Bestellkopf"/>
@@ -16,7 +25,7 @@
 			<xs:element ref="Besteller"/>
 			<xs:element name="Datum" type="xs:string"/>
 			<xs:element name="Rechenadresse" type="xs:string" minOccurs="0"/>
-			<xs:element ref="Lieferadresse" minOccurs="1"/>
+			<xs:element ref="Lieferadresse" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="Besteller">
@@ -34,16 +43,7 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="Rechenadresse" type="Adresse_Typ"/>
-	<xs:element name="Lieferadresse" type="Adresse_Typ">
-		<xs:unique name="lieferadresseUnique">
-			<xs:selector xpath="adresse"/>
-			<xs:field xpath="lieferadresse"/>
-		</xs:unique>
-		<xs:key name="LieferadresseKey">
-			<xs:selector xpath="adresse"/>
-			<xs:field xpath="@id"/>
-		</xs:key>
-	</xs:element>
+	<xs:element name="Lieferadresse" type="Adresse_Typ"/>
 	<!-- .............................................................................................................................................. -->
 	<xs:element name="Bestellrumpf" type="BestellrumpfTyp"/>
 	<xs:complexType name="BestellrumpfTyp">
@@ -57,12 +57,8 @@
 				<xs:element name="Bestellnummer" type="xs:string" minOccurs="1"/>
 				<xs:element name="Bestellmenge" type="xs:decimal"/>
 				<xs:element name="Kurzbeschreibung" type="xs:string" minOccurs="0" maxOccurs="1"/>
-				<xs:element ref="Lieferadresse"/>
+				<xs:element name="LID" type="xs:int"/>
 			</xs:sequence>
 		</xs:complexType>
-		<xs:keyref name="idFremdKeyLieferadresse" refer="LieferadresseKey">
-			<xs:selector xpath="Lieferadresse"/>
-			<xs:field xpath="@references"/>
-		</xs:keyref>
 	</xs:element>
 </xs:schema>

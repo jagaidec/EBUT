@@ -11,6 +11,7 @@
 		</Besteller>
 		<Datum>28.10.2014</Datum>
 		<Lieferadresse>
+			<id>1</id>
 			<Plz>777777</Plz>
 			<HausNr>1</HausNr>
 			<Straße>Hüttenweg</Straße>
@@ -18,13 +19,11 @@
 	</Bestellkopf>
 	<Bestellrumpf>
 		<Bestellpositionen>
-			<Bestellnummer>1</Bestellnummer>
+			<Bestellnummer>2</Bestellnummer>
 			<Bestellmenge>10</Bestellmenge>
-			<Lieferadresse>
-				<Plz>77777</Plz>
-				<HausNr>1</HausNr>
-				<Straße>Hüttenweg</Straße>
-			</Lieferadresse>
+			<LID>
+				1
+			</LID>
 		</Bestellpositionen>
 	</Bestellrumpf>
 </Bestelung>

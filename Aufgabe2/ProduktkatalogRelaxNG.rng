@@ -11,9 +11,9 @@
 	<oneOrMore>
 		<element name="Artikel">
 			<element name="Kurzbeschreibung"><text/></element>
-			<optionalce>
+			<optional>
 				<element name="Hersteller"><text/></element>
-			</optionalce>
+			</optional>
 			<oneOrMore>
 				<element name="ZusatzArtikel"><text/></element>
 			</oneOrMore>
@@ -29,7 +29,11 @@
 				</choice>
 			</element>
 			<zeroOrMore>
-				<element name="Zubehör"></element>
+			 	
+				<element name="Zubehör"> 
+					<attribute name="artikelNr"></attribute>  
+				</element>
+				
 			</zeroOrMore>
 		</element>
 	</oneOrMore>
