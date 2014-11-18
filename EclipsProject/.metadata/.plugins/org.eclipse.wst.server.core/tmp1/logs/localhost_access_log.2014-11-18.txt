@@ -1,0 +1,10 @@
+127.0.0.1 - - [18/Nov/2014:10:38:33 +0100] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:38:34 +0100] "GET /WholesalerWebDemo/ HTTP/1.1" 200 2324
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:38:59 +0100] "GET /WholesalerWebDemo/controllerservlet;jsessionid=FEC2851DCFDA655C787B51E7397E4BE7?action=login&role=1&username=internal1&password=internal1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:38:59 +0100] "GET /WholesalerWebDemo/welcome.jsp HTTP/1.1" 200 1402
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:39:02 +0100] "GET /WholesalerWebDemo/controllerservlet?action=showOrderList HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:39:03 +0100] "GET /WholesalerWebDemo/orders.jsp HTTP/1.1" 200 2275
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:39:03 +0100] "GET /WholesalerWebDemo/images/buttons/refresh.png HTTP/1.1" 200 989
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:39:05 +0100] "GET /WholesalerWebDemo/controllerservlet?action=showProductList HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:39:05 +0100] "GET /WholesalerWebDemo/products.jsp HTTP/1.1" 200 8742
+0:0:0:0:0:0:0:1 - - [18/Nov/2014:10:54:38 +0100] "GET /WholesalerWebDemo/welcome.jsp HTTP/1.1" 200 1402
