@@ -20,8 +20,8 @@
 	<!-- file upload with Apache Commons FileUpload -->
 	
 	<div>
-		<form action="" method="POST">
-			<input type="file" name="upload"><br>
+		<form action="<%=response.encodeURL("controllerservlet")%>" method="Post" name="action">
+			<input type="file" name="userXML"><br>
 			<input type="submit" value="UPLOAD">
 		</form>
 	</div>
