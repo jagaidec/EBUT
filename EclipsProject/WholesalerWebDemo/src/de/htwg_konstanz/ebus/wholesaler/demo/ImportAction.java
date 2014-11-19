@@ -13,7 +13,7 @@ public class ImportAction implements IAction {
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response, ArrayList<String> errorList) {
 		// TODO Auto-generated method stub
-		return "MyImportAction.jsp";
+		return "importAction.jsp";
 	}
 
 	@Override
