@@ -5,9 +5,417 @@
       <description>Pipes Output</description>
       <link>http://pipes.yahoo.com/pipes/pipe.info?_id=790c1cc25610e6b571d4857eaeb44fa4</link>
       <atom:link rel="next" href="http://pipes.yahoo.com/pipes/pipe.run?_id=790c1cc25610e6b571d4857eaeb44fa4&amp;_render=rss&amp;page=2" />
-      <pubDate>Tue, 18 Nov 2014 08:55:16 +0000</pubDate>
+      <pubDate>Wed, 19 Nov 2014 11:00:17 +0000</pubDate>
       <generator>http://pipes.yahoo.com/pipes/</generator>
       <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+         <title>A JRebel Ticket Monster on OpenShift</title>
+         <link>http://feedproxy.google.com/~r/jbossbuzz/~3/PzuhvFwf9ZU/2014-11-15-a-ticketmonster-on-openshift.html</link>
+         <description>&lt;div id="preamble"&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://www.jboss.org/products/devstudio/overview/"&gt;JBoss Developer Studio&lt;/a&gt; allows you publish and run your &lt;a rel="nofollow" target="_blank" href="http://www.eclipse.org/home/index.php"&gt;Eclipse&lt;/a&gt; projects on &lt;a rel="nofollow" target="_blank" href="https://www.openshift.com/"&gt;OpenShift&lt;/a&gt;.
+      This post shows you how to get started using the &lt;a rel="nofollow" target="_blank" href="http://www.jboss.org/ticket-monster/"&gt;JBoss Developer Ticket Monster&lt;/a&gt; demo application.&lt;br&gt;
+      In a 2nd part I will show you how to change your code in Eclipse and have those changes instantly available on OpenShift using the &lt;a rel="nofollow" target="_blank" href="http://zeroturnaround.com/software/jrebel/"&gt;JRebel&lt;/a&gt; cartridge.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="deploy-and-run-ticket-monster-on-openshift"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#deploy-and-run-ticket-monster-on-openshift"&gt;&lt;/a&gt;Deploy and Run Ticket Monster on OpenShift&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="videoblock"&gt;
+      &lt;div class="content"&gt;
+      
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="get-the-code"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#get-the-code"&gt;&lt;/a&gt;Get the code&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The JBoss Developer project created the &lt;a rel="nofollow" target="_blank" href="http://www.jboss.org/ticket-monster/"&gt;Ticket Monster&lt;/a&gt; demo to showcase a modern &lt;a rel="nofollow" target="_blank" href="https://angularjs.org/"&gt;angularjs&lt;/a&gt; and JavaEE application.
+      The code for this blog is at:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="literalblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;pre&gt;https://github.com/adietish/ticket-monster.git&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="admonitionblock caution"&gt;
+      &lt;table&gt;&lt;tr&gt;
+      &lt;td class="icon"&gt;
+      &lt;i class="fa icon-caution" title="Caution"&gt;&lt;/i&gt;
+      &lt;/td&gt;
+      &lt;td class="content"&gt;
+      The original code for the  Ticket Monster is available at &lt;a rel="nofollow" target="_blank" href="https://github.com/jboss-developer/ticket-monster"&gt;Github&lt;/a&gt;.&lt;br&gt;
+      The webapp with its maven pom is located in the &lt;a rel="nofollow" target="_blank" href="https://github.com/jboss-developer/ticket-monster/tree/WFLY8.1/demo"&gt;demo&lt;/a&gt; folder.
+      OpenShift on the other hand is expecting a pom in the root of the git repository.
+      Without it OpenShift will not know how to build the code when you push it.
+      To fix this I created a fork of the webapp where I put the content of the demo folder to the root of the git repository
+      &lt;/td&gt;
+      &lt;/tr&gt;&lt;/table&gt;
+      &lt;/div&gt;
+      &lt;div class="olist arabic"&gt;
+      &lt;ol class="arabic"&gt;
+      &lt;li&gt;
+      &lt;p&gt;Copy this url to your clipboard and in your Eclipse, switch to the &lt;strong&gt;Git perspective&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Launch the &lt;strong&gt;Clone Git Repository&lt;/strong&gt; wizard. It will popup with all the values already in place. Hit &lt;b class="button"&gt;Next&lt;/b&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Pick the master branch and hit &lt;b class="button"&gt;Finish&lt;/b&gt; to get the repo cloned to your local machine.&lt;br&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Once the cloning is done the new repo will appear in the &lt;strong&gt;Git Repositories&lt;/strong&gt; view.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Import the project within it by using menu:Import Projects&amp;#8230;&amp;#8203; in the context menu.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Back to the JBoss or Jave EE perspective you will spot the new project &lt;strong&gt;ticket-monster&lt;/strong&gt; in your workspace.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="openshift-create-an-application-for-my-project-please"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#openshift-create-an-application-for-my-project-please"&gt;&lt;/a&gt;OpenShift, create an Application for my project, please!&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You are now ready to deploy it to OpenShift.
+      Pick &lt;strong&gt;&lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Configure&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;New/Import OpenShift Application&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt; from the context menu of the ticket-monster project.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="configure openshift application"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The OpenShift application wizard that you now get prompts you to provide your OpenShift credentials.
+      Either use an existing account from the combo or create a new one, providing server, username and password.&lt;br&gt;
+      In the next page we choose to create a new OpenShift application and pick the application type.
+      We will use &lt;strong&gt;WildFly 8&lt;/strong&gt; which you&amp;#8217;ll find by filtering the available choices with "wildfly".
+      The latest version of OpenShift has it in the Basic Cartridges (previous versions - like the one used in the screencast - had it in the quickstarts).&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="wildfly8 application"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Once you picked it you can choose the application name in the next wizard page.&lt;br&gt;
+      The wizard suggests a name that is based on the project name.
+      OpenShift doesn&amp;#8217;t allow non-alphanumeric characters for the name, you therefore have to correct it, remove the hyphen and get "ticketmonster".&lt;br&gt;
+      You may also select the domain (if you have several ones) and possibly adjust the gear size and have your application scaling.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="application settings"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;If you now hit &lt;strong&gt;Finish&lt;/strong&gt; the wizard will create your OpenShift application, prepare your local project to run on OpenShift and create a server adapter for easy publishing.&lt;br&gt;
+      Once the wildfly cartridge is created on OpenShift, the tooling presents you the credentials to access the wildfly administrative console in a dialog.
+      You should copy those for later usage:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="wildfly admin console"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;In a last step the wizard informs you that it&amp;#8217;ll prepare your local ticket-monster project to run on OpenShift.
+      Confirm these changes by hitting &lt;b class="button"&gt;OK&lt;/b&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="prepare project for openshift"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You are now ready to publish your ticket-monster projcet to OpenShift.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="deploy-your-project"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#deploy-your-project"&gt;&lt;/a&gt;Deploy your project!&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Get to the "Servers" view, select the freshly created server adapter and tell it to menu:publish ticket-monster to OpenShift via its context menu.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="publish to openshift"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="publish to openshift 2"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The dialog prompts you to provide a commit message and select the files that you want to commit and publish.&lt;br&gt;
+      Among the listed files is the &lt;strong&gt;.gitignore&lt;/strong&gt;.
+      Double clicking it shows you that it now includes Eclipse specific project settings.&lt;br&gt;
+      The wizard also added OpenShift configurations in the &lt;strong&gt;.openshift&lt;/strong&gt; folder. &lt;br&gt;
+      Further interesting bits are a marker to have wildFly running on &lt;strong&gt;java 8&lt;/strong&gt; (.openshift/markers/java8).
+      OpenShift markers allow you to configure specific bits like enabling debugging (Enable JPDA marker), hot deployment (Hot Deploy marker) etc.
+      You may choose among java 7 and java 8 via  marker files in .openshift/markers.
+      You can also spot a wildfly configuration file in .openshift/config/standalone.xml that you can modify to your needs.
+      Once you checked all files by clicking the &lt;b class="button"&gt;Select All&lt;/b&gt; button and provided a commit message, you&amp;#8217;re good to go.
+      You can now publish your project to OpenShift by hitting &lt;strong&gt;Commit and Publish&lt;/strong&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The tooling then informs that it will overwrite the current code in OpenShift by doing a push force. It asks you to confirm this.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="push force"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;This is required since the wizard does not properly include the remote history in our local project/git repo.
+      It clones the remote repo and then copies some of its content into the local project, it does not recursive merge since this is/was not fully reliable yet
+      (see &lt;a rel="nofollow" target="_blank" href="https://issues.jboss.org/browse/JBIDE-14890"&gt;JBIDE-14890&lt;/a&gt; for further details).
+      It is therefore required to overwrite the remote content when you do the initial deployment.
+      Once you hit &lt;strong&gt;OK&lt;/strong&gt; the server adapter is pushing the local code to OpenShift.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Eclipse then shows you the &lt;strong&gt;Console&lt;/strong&gt; with the output of the publishing operation.
+      You can see how the maven build is triggered, WildFly is restarted and your project is then deployed.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="build and deploy"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;In order to verify that your server is fully you can have a look at the logs.
+      Pick &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;OpenShift&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Tail files&amp;#8230;&amp;#8203;&lt;/span&gt;&lt;/span&gt; from the OpenShift submenu in the context menu of your ticketmonster server adapter.
+      The upcoming wizard allows you to fine-tune the tail files options and include the gears that your application is running on.
+      You can stick to the default which are usually just fine.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="tail files"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;A fully started Wildfly will output 'Wildfly 8.1.0.Final "Kenny" started' in the logs.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="wildfly started"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You&amp;#8217;re now ready to have a look at your running project.
+      Pick menu:[Show In &amp;gt; Web Browser] from the context menu of your ticketmonster server adapter and see how the browser is pointed to your deployed webapp.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="open browser"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="ticket monster webapp"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="change-locally-see-openshift-change-instantly"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#change-locally-see-openshift-change-instantly"&gt;&lt;/a&gt;Change locally, see OpenShift change instantly!&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="videoblock"&gt;
+      &lt;div class="content"&gt;
+      
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="install-jrebel"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#install-jrebel"&gt;&lt;/a&gt;Install JRebel&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;We are now getting a step further and show you how we can change the application code locally and have those changes instantly available on OpenShift.&lt;br&gt;
+      To achieve this you need to install the &lt;a rel="nofollow" target="_blank" href="http://zeroturnaround.com/software/jrebel/"&gt;JRebel&lt;/a&gt; plugin into your JBoss Developer Studio.
+      The Eclipse plugin is available from JBoss Central.
+      Switch to the Software/Updates tab, search for JRebel, check it once it is listed and hit "Install/Update".
+      Once you restarted Eclipse your have JRebel enabled in your IDE&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="install jrebel"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="enable-jrebel-for-your-project"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#enable-jrebel-for-your-project"&gt;&lt;/a&gt;Enable JRebel for your Project&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Open up the context menu of your project and enable the &lt;strong&gt;JRebel Nature&lt;/strong&gt; for your project (menu:[JRebel &amp;gt; Add JRebel Nature]).
+      In a 2nd step then enable &lt;strong&gt;JRebel Remoting&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="enable jrebel remoting"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You have to configure the local JRebel where to publish to.
+      You therefore need the public URL of your ticket monster as it runs on OpenShift.
+      You get this in the application details: pick &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;OpenShift&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Details&lt;/span&gt;&lt;/span&gt; and copy the &lt;strong&gt;Public URL&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="application public url"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Paste it to the JRebel Deployment URL(s) by picking &lt;strong&gt;Advanced Properties&lt;/strong&gt; from the JRebel context menu of your ticket-monster project.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="jrebel deployment url"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="downgrade-to-java-7"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#downgrade-to-java-7"&gt;&lt;/a&gt;Downgrade to Java 7&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Wildfly is configured to run with Java 8 by default. With JRebel enabled the OpenShift small gear that you get for free tends to run out of memory.
+      It is therefore suggested that you downgrade to Java 7.
+      You go to the context menu of your project and pick *&lt;span class="menuseq"&gt;&lt;span class="menu"&gt;OpenShift&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Configure Markers&amp;#8230;&amp;#8203;&lt;/span&gt;&lt;/span&gt;, uncheck java8 and check Java 7.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="java7 marker"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="add-the-jrebel-cartridge-in-openshift"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#add-the-jrebel-cartridge-in-openshift"&gt;&lt;/a&gt;Add the JRebel cartridge in OpenShift&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The JRebel cartridge for OpenShift, available from &lt;a rel="nofollow" target="_blank" href="https://github.com/openshift-cartridges/openshift-jrebel-cartridge"&gt;Github&lt;/a&gt;, makes it very easy to enable JRebel for any Java app on OpenShift.
+      To add this cartridge to your application you get to the Servers view and choose menu: OpenShift[Edit Embedded Catridges&amp;#8230;&amp;#8203;].&lt;br&gt;
+      In the upcoming wizard you check the &lt;strong&gt;Code Anything&lt;/strong&gt; cartridge and paste the following url:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="literalblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;pre&gt;https://cartreflect-claytondev.rhcloud.com/reflect?github=openshift-cartridges/openshift-jrebel-cartridge&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="code anything cartridge"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Once you hit &lt;b class="button"&gt;Finish&lt;/b&gt; the wizard will add the cartridge to your OpenShift application and enable JRebel for it.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="publish-your-project-to-openshift"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#publish-your-project-to-openshift"&gt;&lt;/a&gt;Publish your project to OpenShift&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You now have to push all your local changes to OpenShift (you added the JRebel nature and downgraded to java7).
+      You have to tell the server adapter to publish:
+      Choose &lt;strong&gt;Publish&lt;/strong&gt; in the context menu of your OpenShift server adapter.&lt;br&gt;
+      The upcoming commit- and publish-dialog shows your local changes:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="jrebel changes"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You replaced the java8 with a java7 marker and added 2 xml files that configure JRebel.
+      Once you add a commit message you&amp;#8217;re ready to hit &lt;strong&gt;Commit and Publish&lt;/strong&gt;.&lt;br&gt;
+      If you now go to the &lt;strong&gt;Console&lt;/strong&gt; view and pick the ticketmonster, you will see how OpenShift picks those changes and rebuilds your code.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="ticketmonster console"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You can inspect the server logs to make sure wildfly the procedure is all finished and widlfly fully restarted.
+      In the Servers view, pick &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;OpenShift&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Tail Files&amp;#8230;&amp;#8203;&lt;/span&gt;&lt;/span&gt;, stick to the default options and hit &lt;b class="button"&gt;Finish&lt;/b&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="wildfly started"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;'WildFly 8.1.0.Final "Kenny" started' in the logs tells you that wildfly was successfully restarted.
+      You are now ready to change code locally and have them picked up in OpenShift instantly.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="pick-my-local-changes-instantly-openshift"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#pick-my-local-changes-instantly-openshift"&gt;&lt;/a&gt;Pick my local changes instantly, OpenShift!&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;We will change the ticket price and we will therefore first check the current price.
+      Use &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Show In&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Browser&lt;/span&gt;&lt;/span&gt; in the context menu of your server adapter which will open up the application in your browser.
+      In your browser then hit hit &lt;strong&gt;Buy tickets now&lt;/strong&gt;, &lt;strong&gt;Book Ticket&lt;/strong&gt;, choose some venue, date, time and section. You will then see the current price:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="ticket price1"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Back in your JBoss Developer Studio let us now change the ticket price:&lt;br&gt;
+      Open up the &lt;strong&gt;TicketPrice&lt;/strong&gt; and get to the &lt;strong&gt;getPrice()&lt;/strong&gt; method. Change it to the following:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="listingblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;pre class="highlight"&gt;&lt;code class="language-java"&gt;    public float getPrice() {
+          //   return price;
+          	return createFakePrice();
+          }
+      
+          private float createFakePrice() {
+      		return 42f;
+      	}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;When you &lt;strong&gt;save&lt;/strong&gt; your Java editor, you will see the JRebel console popping up and show you how it is updating the java classes in OpenShift.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="rebel updating openshift"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Now get back to your browser and refresh the page.
+      You will have to select the venue again in order to see the new ticket price: It is now at &lt;strong&gt;$42&lt;/strong&gt;!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="ticket price2"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;We did not have to publish our code to OpenShift via the server adapter. JRebel published our local changes on the fly!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/PzuhvFwf9ZU" height="1" width="1"/&gt;</description>
+         <author>adietish</author>
+         <guid isPermaLink="false">http://tools.jboss.org/blog/2014-11-15-a-ticketmonster-on-openshift.html</guid>
+         <pubDate>Sat, 15 Nov 2014 00:00:00 +0000</pubDate>
+      <feedburner:origLink>http://tools.jboss.org/blog/2014-11-15-a-ticketmonster-on-openshift.html</feedburner:origLink></item>
+      <item>
          <title>This week in JBoss (14th November 2014) : xPaaS All The Things</title>
          <link>http://feedproxy.google.com/~r/jbossbuzz/~3/nHHj_PQ13_c/this-week-in-jboss-14th-november-2014-xpaas-all-the-things</link>
          <description>&lt;div class="jive-rendered-content"&gt;&lt;p&gt;Welcome to the JBoss weekly editorial. This is a premiere for me, because it's actually the first ever post on this blog. It is my pleasure to bring you the most important news from the JBoss Community for this week.&lt;/p&gt;&lt;p style="min-height:8pt;height:8pt;padding:0px;"&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;Devoxx 2014&lt;/h1&gt;&lt;p&gt;This week was all about Devoxx Belgium. With Red Hat as a Platinum sponsor there's been a lot going on around it. Beside the fact, that we hat 12 speaker on site which gave a total of 18 sessions we also had the pleasure to talk about our xPaaS offerings in the Wednesday keynote. In this keynote we took a look at what&amp;#8217;s happening today around cloud and PaaS and presented some ideas and visions as to what may be the future of enterprise application development. The demo included a complete integration beginning with a mobile client and reaching all the way through to JBoss Fuse running on Open Shift Enterprise. The following blog-posts summarize the technical background of the keynote and give further pointer for you to dig into:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/what_is_your_x_the_technical_details_about_the_devoxx_keynote_demo"&gt;What is your x? The technical details about the keynote demo at Devoxx&lt;/a&gt;"&lt;/li&gt;&lt;li&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://www.feedhenry.com/pushing-ahead-with-integrations/"&gt;FeedHenry and Red Hat Pushing ahead with Integrations&lt;/a&gt;"&lt;/li&gt;&lt;li&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://aerogear.org/news/2014/11/11/aerogear-feedhenry-integration/index.html"&gt;FeedHenry meets AeroGear UnifiedPush Server!&lt;/a&gt;"&lt;/li&gt;&lt;li&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://planet.jboss.org/post/devoxx_keynote_feedhenry_aerogear_demo"&gt;Devoxx keynote Feedhenry AeroGear demo&lt;/a&gt;"&lt;/li&gt;&lt;li&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://www.redhat.com/en/about/press-releases/red-hat-launches-new-release-openshift-enterprise-and-adds-private-ipaas"&gt;Red Hat Launches New Release of OpenShift Enterprise and Adds Private iPaaS&lt;/a&gt;"&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://blog.openshift.com/announcing-openshift-enterprise-2-2/"&gt;Announcing OpenShift Enterprise 2.2&lt;/a&gt;"&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;"&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://www.schabell.org/2014/11/best-way-recap-devoxx-2014-mastering-xpaas.html"&gt;Best Way to Recap Devoxx 2014 Mastering xPaaS University Session&lt;/a&gt;"&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;Beside that, another new initiative has been launched at Devoxx. The content portal Voxxed. Arun Gupta took the chance to publish a first &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/java_ee_7_video_course_on_voxxed_com"&gt;Java EE 7 Course&lt;/a&gt;. Further on he published his slides from his Devoxx university talk "&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/slides_from_nuts_and_bolts_of_websocket_at_devoxx_2014"&gt;Nuts and Bolts of Websocket&lt;/a&gt;". And I gave an interview to Voxxed about &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://www.voxxed.com/blog/2014/11/markus-eisele-on-java-ee-and-community/"&gt;Java EE and why it is important to contribute&lt;/a&gt; to the community.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;&lt;a rel="nofollow" target="_blank" href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5617-23993/Capture.PNG"&gt;&lt;img alt="Capture.PNG" class="image-0 jive-image" height="370" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5617-23993/Capture.PNG" style="height:225px;width:620px;" width="1020"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;h1&gt;News in Middleware and OpenShift&lt;/h1&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;Mark Little pushed out some thoughts about the trends in middleware. &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/open_source_trends_talk"&gt;His OpenSlava keynote&lt;/a&gt; was recorded and is now available for everybody to watch. More generally he &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/the_enterprise_middleware_platform"&gt;reflected about EAP and the platform&lt;/a&gt; this week. The OpenShift team published a twenty minute &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://blog.openshift.com/docker-hub-images/"&gt;interview which gets to the core of what OpenShift V3&lt;/a&gt; is all about and how Red Hat's deep portfolio of open source solutions and outside community projects come together to make it all possible. You can also learn &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://blog.openshift.com/deploying-postgresql-pod-openshift-v3/"&gt;how to deploy a PostgresSQL Pod in OpenShift V3&lt;/a&gt;. The OptaPlanner Team wrote about the &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://www.optaplanner.org/blog/2014/11/07/OpenBenchmarksForTheWin.html"&gt;importance for open benchmarks&lt;/a&gt;. Another article in the series about "Tricks Competitors Play" talks about "&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://rhjm.naszcyniec.com/blog/?p=53"&gt;pushing less functional products&lt;/a&gt;".&lt;/span&gt;&lt;/p&gt;&lt;p style="min-height:8pt;height:8pt;padding:0px;"&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;Messaging and Integration&lt;/h1&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;The RHQ Team is busy to integrate messaging into RHQ and they started to &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/messaging_infrastructure_using_activemq"&gt;work on rhq-msg&lt;/a&gt; which is a simple messaging API built on top of ActiveMQ and JMS. The tools team released an &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/early_access_to_luna_capable_integration_tools"&gt;early access version of the Integration Tools for Eclipse Luna&lt;/a&gt;. Jamie Goodyear wrote a little tool which outputs your &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://icodebythesea.blogspot.be/2014/11/want-to-see-your-top-apache-camel.html"&gt;Camel route metrics in a Linux top like manner&lt;/a&gt;. Claus Ibsen wrote about what &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://www.davsclaus.com/2014/11/apache-camel-please-explain-me-what.html"&gt;is cooking for next Camel 2.15 release&lt;/a&gt; which will be a lot smarter.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size:10pt;line-height:1.5em;"&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;h1&gt;Travel and Reports&lt;/h1&gt;&lt;p&gt;&lt;span style="line-height:1.5em;font-size:10pt;"&gt;I pushed another trip report about my recent &lt;/span&gt;endeavors&lt;span style="line-height:1.5em;font-size:10pt;"&gt;. This time it gives you some impressions from the amazing &lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://planet.jboss.org/post/trip_report_joker_conf_2014"&gt;JokerConf&lt;/a&gt; which was held in Russia.&lt;/span&gt;&lt;/p&gt;&lt;p style="min-height:8pt;height:8pt;padding:0px;"&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;New Releases&lt;/h1&gt;&lt;p&gt;There were two new releases this week:&lt;/p&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="http://forge.jboss.org/news/2014-11-07/forge-2.12.2.final-(pins)-is-here"&gt;Forge 2.1.2.2.Final (Pins)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a rel="nofollow" class="jive-link-external-small" target="_blank" href="https://blog.openshift.com/announcing-openshift-enterprise-2-2/"&gt;OpenShift Enterprise 2.2&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p style="min-height:8pt;height:8pt;padding:0px;"&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;That's all for this week, please join us again next week when we will bring you more news and events from the JBoss Community.&lt;/p&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/nHHj_PQ13_c" height="1" width="1"/&gt;</description>
@@ -5100,4 +5508,4 @@ Petals Studio was also the pretext to start using <a rel="nofollow" target="_bla
          </media:content>
       <feedburner:origLink>http://mickaelistria.wordpress.com/2012/01/31/goodbye-petalslink-hello-jbossred-hat/</feedburner:origLink></item>
    </channel>
-</rss><!-- fe7.yql.bf1.yahoo.com compressed/chunked Tue Nov 18 08:55:13 UTC 2014 -->
+</rss><!-- fe9.yql.bf1.yahoo.com compressed/chunked Wed Nov 19 11:00:09 UTC 2014 -->
