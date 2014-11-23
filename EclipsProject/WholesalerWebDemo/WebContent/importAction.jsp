@@ -21,7 +21,7 @@
 	
 	<div>
 		<form action="<%=response.encodeURL("controllerservlet")%>" method="Post" name="action">
-			<input type="file" name="userXML"><br>
+			<input type="file" name="userXML" accept="xml" ><br>
 			<input type="submit" value="UPLOAD">
 		</form>
 	</div>

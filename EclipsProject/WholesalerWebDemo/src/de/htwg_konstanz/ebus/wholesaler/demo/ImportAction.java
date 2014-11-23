@@ -12,8 +12,14 @@ public class ImportAction implements IAction {
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response, ArrayList<String> errorList) {
-		// TODO Auto-generated method stub
+		
+	    ValidatingXML();
+		
 		return "importAction.jsp";
+	}
+
+	private void ValidatingXML() {
+		
 	}
 
 	@Override

@@ -5,9 +5,210 @@
       <description>Pipes Output</description>
       <link>http://pipes.yahoo.com/pipes/pipe.info?_id=790c1cc25610e6b571d4857eaeb44fa4</link>
       <atom:link rel="next" href="http://pipes.yahoo.com/pipes/pipe.run?_id=790c1cc25610e6b571d4857eaeb44fa4&amp;_render=rss&amp;page=2" />
-      <pubDate>Wed, 19 Nov 2014 15:00:53 +0000</pubDate>
+      <pubDate>Thu, 20 Nov 2014 11:50:48 +0000</pubDate>
       <generator>http://pipes.yahoo.com/pipes/</generator>
       <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+         <title>New Videos on Hybrid Mobile Developement Tools</title>
+         <link>http://feedproxy.google.com/~r/jbossbuzz/~3/zyPdU9s4Huk/2014-11-20-hybrid_tooling_videos.html</link>
+         <description>&lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://twitter.com/burrsutter"&gt;Burr Sutter&lt;/a&gt; recently recorded and uploaded a handful of screencasts on &lt;strong&gt;Hybrid Mobile Development Tools&lt;/strong&gt; that we recently shipped in &lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/downloads/jbosstools/luna/4.2.0.Final.html"&gt;JBoss Tools 4.2.0.Final&lt;/a&gt; and &lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/downloads/devstudio/luna/8.0.0.GA.html"&gt;JBoss Developer Studio 8.0.0.Final&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Those videos (totalling more than 1h15 of materials!) cover the following topics:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ulist"&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_cordova_installation.html"&gt;Installation and Introduction to Apache Cordova&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_cordova_jquerymobile_rest.html"&gt;Cordova&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_cordova_device_contacts.html"&gt;Device Contacts via Apache Cordova&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_angularjs_ionic.html"&gt;Developing AngularJS + Ionic Hybrid Apps&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_push_notifications.html"&gt;Push Notifications GCM&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_fun_stuff_cordova.html"&gt;Fun Stuff with Apache Cordova&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/documentation/videos/hybrid_iphone_dev_cordova.html"&gt;iPhone Development &amp;amp; Deployment with Apache Cordova&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Sit back, grab your headphones and enjoy ;-)&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Xavier&lt;br&gt;&lt;a rel="nofollow" target="_blank" href="http://twitter.com/xcoulon"&gt;@xcoulon&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/zyPdU9s4Huk" height="1" width="1"/&gt;</description>
+         <author>xcoulon</author>
+         <guid isPermaLink="false">http://tools.jboss.org/blog/2014-11-20-hybrid_tooling_videos.html</guid>
+         <pubDate>Thu, 20 Nov 2014 00:00:00 +0000</pubDate>
+      <feedburner:origLink>http://tools.jboss.org/blog/2014-11-20-hybrid_tooling_videos.html</feedburner:origLink></item>
+      <item>
+         <title>Maven improvements in JBoss Tools 4.2 and Developer Studio 8.0</title>
+         <link>http://feedproxy.google.com/~r/jbossbuzz/~3/peXQjZKOcko/2014-11-19-maven-improvements.html</link>
+         <description>&lt;div id="preamble"&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;In JBoss Tools and JBoss Developer Studio, we&amp;#8217;re continuously working to augment the Maven integration experience in Eclipse. Some of the features we&amp;#8217;ve been playing with, if deemed successful, will eventually be contributed back to m2e, like the &lt;a rel="nofollow" target="_blank" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=428094"&gt;Maven Profile Management UI&lt;/a&gt;. Others, more centered around JBoss technologies, will stay under the JBoss Tools umbrella.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;JBoss Tools 4.2 and Developer Studio 8, based on Eclipse Luna, take advantage of all the nice improvements made to &lt;a rel="nofollow"&gt;m2e 1.5.0&lt;/a&gt; and then, add some more :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="m2eclipse-egit-integration"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#m2eclipse-egit-integration"&gt;&lt;/a&gt;m2eclipse-egit integration&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The &lt;em&gt;Import &amp;gt; Checkout Maven Projects from SCM&lt;/em&gt; wizard doesn&amp;#8217;t have any SCM provider by default, which can be pretty frustrating at times. With Git becoming the new de facto source control system, it only made sense to make &lt;a rel="nofollow" target="_blank" href="https://github.com/tesla/m2eclipse-egit"&gt;m2eclipse-egit&lt;/a&gt; the sensible default SCM provider for m2e.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;m2eclipse-egit will now be automatically installed when a JBoss Maven integration feature is installed from the JBoss Tools update site.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;It is installed by default with JBoss Developer Studio 8.0.0 as well.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="maven-central-archetype-catalog"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#maven-central-archetype-catalog"&gt;&lt;/a&gt;Maven Central Archetype catalog&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Since m2e 1.5.0 no longer downloads Nexus Indexes by default, a very small, outdated subset of Maven Archetypes is available out of the box.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;To mitigate that, the JBoss Tools Maven integration feature now registers by default the Maven Central Archetype catalog,
+      providing more than 9600 archetypes to chose from, when creating a new Maven project. Accessing the complete list of archetypes
+      is even way, waayyyy faster (a couple seconds) than relying on the old Nexus index download.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="maven central catalog"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="pom-properties-controlled-project-configurators"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#pom-properties-controlled-project-configurators"&gt;&lt;/a&gt;Pom properties-controlled project configurators&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;JBoss project configurators for m2e now support an activation property in the &amp;lt;properties&amp;gt; section of pom.xml. Expected values are true/false and override the workspace-wide preferences found under &lt;code&gt;Preferences &amp;gt; JBoss Tools &amp;gt; JBoss Maven Integration&lt;/code&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Available properties are :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ulist"&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;&amp;lt;m2e.cdi.activation&amp;gt;true&amp;lt;/m2e.cdi.activation&amp;gt;&lt;/code&gt; for the CDI Project configurator,&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;&amp;lt;m2e.seam.activation&amp;gt;true&amp;lt;/m2e.seam.activation&amp;gt;&lt;/code&gt; for the Seam Project configurator,&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;&amp;lt;m2e.hibernate.activation&amp;gt;true&amp;lt;/m2e.hibernate.activation&amp;gt;&lt;/code&gt; for the Hibernate Project configurator,&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;&amp;lt;m2e.portlet.activation&amp;gt;true&amp;lt;/m2e.portlet.activation&amp;gt;&lt;/code&gt; for the Portlet Project configurator.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The pom.xml editor also provides matching XML templates for these properties, when doing &lt;code&gt;ctrl+space&lt;/code&gt; in the &amp;lt;properties&amp;gt; section.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="maven-repository-wizard-improvements"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#maven-repository-wizard-improvements"&gt;&lt;/a&gt;Maven Repository wizard improvements&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The Configure Maven Repositories wizard, available under &lt;code&gt;Preferences &amp;gt; Jboss Tools &amp;gt; JBoss Maven Integration&lt;/code&gt; saw a couple improvements as well :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="advanced-options-for-maven-repositories"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#advanced-options-for-maven-repositories"&gt;&lt;/a&gt;Advanced options for maven repositories&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;You can now choose the repository layout, enable/disable snapshots or releases, and change the update policy in the &lt;code&gt;advanced&lt;/code&gt; section :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="maven repository advanced"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect2"&gt;
+      &lt;h3 id="automatically-identify-local-maven-repositories"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#automatically-identify-local-maven-repositories"&gt;&lt;/a&gt;Automatically identify local Maven repositories&lt;/h3&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;When adding a new Maven repository, you can scan for JBoss Maven repositories unzipped locally, with the &lt;code&gt;Recognize JBoss Maven Enterprise Repositories&amp;#8230;&amp;#8203;&lt;/code&gt; button, in order to automatically add it to your .m2/settings.xml.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="recognize maven repo"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The identification process now looks for a .maven-repository file at the root of the folder you selected. This file follows the &lt;a rel="nofollow" target="_blank" href="http://en.wikipedia.org/wiki/.properties"&gt;&lt;code&gt;.properties&lt;/code&gt;&lt;/a&gt; file format and is expected to contain up to 3 attributes :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ulist"&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;repository-id&lt;/code&gt; : the repository id&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;name&lt;/code&gt; : a (descriptive) repository name. &lt;em&gt;Optional, defaults to repository-id&lt;/em&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;code&gt;profile-id&lt;/code&gt; : the profile id the repository will be activated from. &lt;em&gt;Optional, defaults to repository-id&lt;/em&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;As a concrete example, the JBoss Mobile repository .maven-repository file would contain :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="literalblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;pre&gt;repository-id=local-jboss-mobile
+      name=JBoss Mobile Maven Repository
+      profile-id=local-jboss-mobile&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="what-s-next"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#what-s-next"&gt;&lt;/a&gt;What&amp;#8217;s next?&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Tired of seeing these "Project configuration is out-of-date" errors whenever you tweak your pom.xml? We&amp;#8217;re currently playing with a &lt;a rel="nofollow" target="_blank" href="https://github.com/jbosstools/jbosstools-playground#auto-update-out-of-date-maven-project-configuration"&gt;plugin&lt;/a&gt; that will automatically do the &lt;code&gt;Maven&lt;/code&gt; &amp;gt; &lt;code&gt;Update project configuration&lt;/code&gt; for you. You can try a very alpha version
+      from the following p2 repository : &lt;a rel="nofollow" target="_blank" href="http://download.jboss.org/jbosstools/builds/staging/jbosstools-playground_master/all/repo/" class="bare"&gt;http://download.jboss.org/jbosstools/builds/staging/jbosstools-playground_master/all/repo/&lt;/a&gt;. Let us know if/how it works for you, so we can decide what to do next with it.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Enjoy and see you soon!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Fred Bricon&lt;br&gt;&lt;a rel="nofollow" target="_blank" href="https://twitter.com/fbricon"&gt;@fbricon&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/peXQjZKOcko" height="1" width="1"/&gt;</description>
+         <author>fbricon</author>
+         <guid isPermaLink="false">http://tools.jboss.org/blog/2014-11-19-maven-improvements.html</guid>
+         <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      <feedburner:origLink>http://tools.jboss.org/blog/2014-11-19-maven-improvements.html</feedburner:origLink></item>
+      <item>
          <title>A JRebel Ticket Monster on OpenShift</title>
          <link>http://feedproxy.google.com/~r/jbossbuzz/~3/PzuhvFwf9ZU/2014-11-15-a-ticketmonster-on-openshift.html</link>
          <description>&lt;div id="preamble"&gt;
@@ -5508,4 +5709,4 @@ Petals Studio was also the pretext to start using <a rel="nofollow" target="_bla
          </media:content>
       <feedburner:origLink>http://mickaelistria.wordpress.com/2012/01/31/goodbye-petalslink-hello-jbossred-hat/</feedburner:origLink></item>
    </channel>
-</rss><!-- fe10.yql.bf1.yahoo.com compressed/chunked Wed Nov 19 15:00:49 UTC 2014 -->
+</rss><!-- fe7.yql.bf1.yahoo.com compressed/chunked Thu Nov 20 11:50:45 UTC 2014 -->
