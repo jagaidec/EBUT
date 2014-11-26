@@ -10,6 +10,20 @@
 </head>
 <body>
 
+	<script>
+		function validate() {
+			
+			if (document.getElementById('file').value !== '') {
+				document.getElementById('upload_form').submit();
+				return true;
+			} else {
+				alert('No File Attached, please select you catalog xml file!');
+				return false;
+			}
+		
+		}
+	</script>
+
 	<%@ include file="header.jsp"%>
 	<%@ include file="error.jsp"%>
 	<%@ include file="authentication.jsp"%>
@@ -20,9 +34,11 @@
 	<!-- file upload with Apache Commons FileUpload -->
 	
 	<div>
-		<form action="<%=response.encodeURL("controllerservlet")%>" method="Post" name="action">
-			<input type="file" name="userXML" accept="xml" ><br>
-			<input type="submit" value="UPLOAD">
+		<form action="<%=response.encodeURL("controllerservlet") + "?action="+ Constants.IMPORT%>" method="Post" name="upload_form" id="upload_form" onsubmit="return validate()">
+		
+			<input type="file" id="file" name="<%=Constants.PARAM_IMPORT_FILENAME%>"><br>
+			<input type="submit" value="upload" id="subButton"/>
+			
 		</form>
 	</div>
 </body>

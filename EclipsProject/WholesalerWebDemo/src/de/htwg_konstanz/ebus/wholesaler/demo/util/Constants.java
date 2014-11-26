@@ -65,5 +65,8 @@ public class Constants
 	public static final int USER_SUPPLIER = 3;
 	
 	public static final String IMPORT = "import";
+	
 	public static final String XML_SCHEMA_IMPORT = "userXML";
+	public static final String PARAM_IMPORT_FILENAME ="Productcatalog.html";
+	
 }
