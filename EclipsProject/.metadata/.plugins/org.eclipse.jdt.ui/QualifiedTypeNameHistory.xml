@@ -2,4 +2,21 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.demo.IAction"/>
 <fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.action.ValidatingXML"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.servlet.ServletFileUpload"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.framework.wholesaler.api.security.Security"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.disk.DiskFileItemFactory"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
+<fullyQualifiedTypeName name="com.sun.tools.ws.wsdl.document.Import"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Document"/>
+<fullyQualifiedTypeName name="javax.xml.validation.SchemaFactory"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.demo.util.Constants"/>
+<fullyQualifiedTypeName name="javax.xml.XMLConstants"/>
+<fullyQualifiedTypeName name="javax.xml.validation.Schema"/>
 </qualifiedTypeNameHistroy>
