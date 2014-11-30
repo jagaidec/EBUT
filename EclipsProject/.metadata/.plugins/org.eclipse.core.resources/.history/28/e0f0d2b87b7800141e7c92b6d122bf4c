@@ -10,7 +10,6 @@ import java.util.List;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -22,7 +21,6 @@ import de.htwg_konstanz.ebus.wholesaler.demo.ControllerServlet;
 import de.htwg_konstanz.ebus.wholesaler.demo.IAction;
 import de.htwg_konstanz.ebus.wholesaler.demo.LoginBean;
 import de.htwg_konstanz.ebus.wholesaler.demo.util.Constants;
-import de.htwg_konstanz.ebus.wholesaler.main.Import;
 
 
 
@@ -47,14 +45,7 @@ public class ImportAction implements IAction {
 							
 							InputStream filecontent = item.getInputStream();
 							
-							try {
-								errorList.add(new Import().uploadFile(filecontent));
-								filecontent.close();
-							} catch (ParserConfigurationException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							
+							//errorList.add(new Import().uploadFile(filecontent));
 							
 						}
 					}

@@ -19,4 +19,6 @@
 <fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.demo.util.Constants"/>
 <fullyQualifiedTypeName name="javax.xml.XMLConstants"/>
 <fullyQualifiedTypeName name="javax.xml.validation.Schema"/>
+<fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.main.Import"/>
 </qualifiedTypeNameHistroy>

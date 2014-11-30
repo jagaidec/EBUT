@@ -47,14 +47,6 @@ public class Import {
 		String ret = "";
 		org.w3c.dom.Document document = this.createDocument(file);
 		
-		try {
-			this.validateDocument(document);
-			//TODO Import in catalog!!!!!!!!!!!!!
-			
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		
 		return ret;
