@@ -1,43 +1,48 @@
 package de.htwg_konstanz.ebus.wholesaler.main;
 	import java.io.File;
-	import java.io.IOException;
-	import java.io.InputStream;
-	import java.math.BigDecimal;
-	import java.util.HashSet;
-	import java.util.List;
-	import java.util.logging.ConsoleHandler;
-	import java.util.logging.Handler;
-	import java.util.logging.Logger;
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.List;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 	
+
 	import javax.xml.XMLConstants;
-	import javax.xml.parsers.DocumentBuilder;
-	import javax.xml.parsers.DocumentBuilderFactory;
-	import javax.xml.parsers.ParserConfigurationException;
-	import javax.xml.transform.dom.DOMSource;
-	import javax.xml.validation.Schema;
-	import javax.xml.validation.SchemaFactory;
-	import javax.xml.validation.Validator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 	
+
 	import org.w3c.dom.NamedNodeMap;
-	import org.w3c.dom.Node;
-	import org.w3c.dom.NodeList;
-	import org.xml.sax.SAXException;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 	
+
 	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOCountry;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOProduct;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOPurchasePrice;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSalesPrice;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSupplier;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.CountryBOA;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.PriceBOA;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.ProductBOA;
-	import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.SupplierBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOProduct;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOPurchasePrice;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSalesPrice;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSupplier;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.CountryBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.PriceBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.ProductBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.SupplierBOA;
+import de.htwg_konstanz.ebus.wholesaler.demo.util.Constants;
 
 
 public class Import {
 	private final String CLASS_NAME = getClass().getName();
 	private final Logger log = Logger.getLogger(CLASS_NAME);
 	private final Handler handler = new ConsoleHandler();
+	private BOSupplier supplier = new BOSupplier();
 	
 	public Import() {
 		log.addHandler(handler);
@@ -49,6 +54,10 @@ public class Import {
 		
 		try {
 			this.validateDocument(document);
+			this.supplier = this.getSupplierForDoc(document);
+			if(this.supplier != null){
+				
+			}
 			//TODO Import in catalog!!!!!!!!!!!!!
 			
 		} catch (SAXException e) {
@@ -102,6 +111,24 @@ public class Import {
 		
 		return ret;
 	}
-	
+
+	public BOSupplier getSupplierForDoc(org.w3c.dom.Document doc){
+		BOSupplier supp = null;
+		NodeList suppName = doc.getElementsByTagName(Constants.CONST_SUPPLIER);
+		String docSupplierCompany = null;
+		if(suppName.getLength()==1){
+			docSupplierCompany = suppName.item(0).getTextContent();
+		}else{
+			//FEHLER TODO
+		}
+		
+		List<BOSupplier> listBOSupplier = SupplierBOA.getInstance().findAll();
+		for(BOSupplier boSupp : listBOSupplier){
+			if(docSupplierCompany.equals(boSupp.getCompanyname())){
+				supp = boSupp;
+			}
+		}
+		return supp;
+	}
 
 }

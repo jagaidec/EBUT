@@ -14,7 +14,7 @@
 		function validate() {
 			
 			if (document.getElementById('file').value !== '') {
-				document.getElementById('upload_form').submit();
+				//document.getElementById('upload_form').submit();
 				return true;
 			} else {
 				alert('No File Attached, please select you catalog xml file!');
@@ -34,7 +34,8 @@
 	<!-- file upload with Apache Commons FileUpload -->
 	
 	<div>
-		<form action="<%=response.encodeURL("controllerservlet") + "?action="+ Constants.IMPORT%>" method="Post" name="upload_form" id="upload_form" onsubmit="return validate()">
+		<form action="<%=response.encodeURL("controllerservlet") + "?action="+ Constants.IMPORT%>" method="Post" 
+			name="upload_form" id="upload_form" onsubmit="return validate()" enctype="multipart/form-data">
 		
 			<input type="file" id="file" name="<%=Constants.PARAM_IMPORT_FILENAME%>"><br>
 			<input type="submit" value="upload" id="subButton"/>

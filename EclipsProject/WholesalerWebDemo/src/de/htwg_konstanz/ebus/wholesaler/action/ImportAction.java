@@ -39,7 +39,7 @@ public class ImportAction implements IAction {
 				DiskFileItemFactory factory = new DiskFileItemFactory();
 				
 				ServletFileUpload upload = new ServletFileUpload(factory);
-				
+				System.out.println(upload.toString());
 				try {
 					List<FileItem> items = upload.parseRequest(request);
 					for(FileItem item : items){
