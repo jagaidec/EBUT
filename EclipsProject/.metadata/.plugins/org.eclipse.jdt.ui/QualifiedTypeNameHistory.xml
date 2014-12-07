@@ -14,11 +14,15 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
 <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
-<fullyQualifiedTypeName name="org.w3c.dom.Document"/>
 <fullyQualifiedTypeName name="javax.xml.validation.SchemaFactory"/>
-<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.demo.util.Constants"/>
 <fullyQualifiedTypeName name="javax.xml.XMLConstants"/>
 <fullyQualifiedTypeName name="javax.xml.validation.Schema"/>
 <fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
 <fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.main.Import"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Document"/>
+<fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.wholesaler.demo.util.Constants"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.framework.wholesaler.api.boa.SupplierBOA"/>
+<fullyQualifiedTypeName name="de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSupplier"/>
 </qualifiedTypeNameHistroy>

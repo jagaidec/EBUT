@@ -10,6 +10,7 @@ import java.util.logging.Handler;
 import java.util.logging.Logger;
 	
 
+
 	import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,11 +21,14 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 	
 
+
 	import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 	
+
 
 	import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOCountry;
 import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOProduct;
@@ -74,9 +78,10 @@ public class Import {
 		org.w3c.dom.Document document = null;
 		DocumentBuilder docBuild;
 		DocumentBuilderFactory docBuildFac = DocumentBuilderFactory.newInstance();
+		
 		docBuildFac.setNamespaceAware(true);
 		docBuildFac.setIgnoringElementContentWhitespace(true);
-		docBuildFac.setValidating(true);
+		docBuildFac.setValidating(false);
 		
 		docBuild=docBuildFac.newDocumentBuilder();
 		try {
@@ -94,19 +99,21 @@ public class Import {
 	
 	public boolean validateDocument(org.w3c.dom.Document doc) throws SAXException{
 		boolean ret = false;
-		SchemaFactory schemaFac = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		Schema bmeCatSchema = null;
 		Validator valid = null;
 		
-		bmeCatSchema = schemaFac.newSchema(new File("C:/Users/Fabian/Documents/EBUT/EBUT/EclipsProject/WholesalerWebDemo/WebContentwsdl/bmecat_new_catalog_1_2_simple_eps_V0.96.xsd"));
+		SchemaFactory schemaFac = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		bmeCatSchema = schemaFac.newSchema(new File("C:/Users/Fabian/Documents/EBUT/EBUT/bmecat_new_catalog_1_2_simple_without_NS.xsd"));
 		valid = bmeCatSchema.newValidator();
 		
 		try {
+			
 			valid.validate(new DOMSource(doc));
+			
 			ret=true;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Error validate");
 		}
 		
 		return ret;
@@ -130,5 +137,7 @@ public class Import {
 		}
 		return supp;
 	}
+	
+	
 
 }
