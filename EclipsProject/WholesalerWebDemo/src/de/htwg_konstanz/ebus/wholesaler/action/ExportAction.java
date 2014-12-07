@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import de.htwg_konstanz.ebus.wholesaler.demo.IAction;
 import de.htwg_konstanz.ebus.wholesaler.demo.LoginBean;
 import de.htwg_konstanz.ebus.wholesaler.demo.util.Constants;
-import de.htwg_konstanz.ebus.wholesaler.demo.util.Constants.ExportFormat;
-import de.htwg_konstanz.ebus.wholesaler.main.Exporter;
 
-public class DownloadAction implements IAction {
+public class ExportAction implements IAction {
 
 	@Override
 	public String execute(HttpServletRequest request,

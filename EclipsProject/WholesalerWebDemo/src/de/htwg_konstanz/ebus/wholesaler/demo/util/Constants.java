@@ -65,4 +65,13 @@ public class Constants
 	public static final int USER_SUPPLIER = 3;
 	
 	public static final String IMPORT = "import";
+	public static final String EXPORT = "export";
+	
+	//Export
+	public static final String ACTION_EXPORT_CATALOG = "exportCatalog";
+	public static final String SEARCH_STRING = "search_string";
+	public static final String FILE_TYPE = "file_type";
+	public static final String FILE_TYPE_VALUE_XML = "file_type_xml";
+	public static final String FILE_TYPE_VALUE_XHTML = "file_type_xhtml";
+	
 }
