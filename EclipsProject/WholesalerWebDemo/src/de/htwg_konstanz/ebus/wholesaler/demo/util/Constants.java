@@ -63,12 +63,9 @@ public class Constants
 	public static final int USER_INTERNAL = 1;
 	public static final int USER_CUSTOMER = 2;
 	public static final int USER_SUPPLIER = 3;
-	
-	public static final String IMPORT = "import";
-	public static final String EXPORT = "export";
-	
+		
 	//Export
-	public static final String ACTION_EXPORT_CATALOG = "exportCatalog";
+	public static final String EXPORT = "export";
 	public static final String SEARCH_STRING = "search_string";
 	public static final String FILE_TYPE = "file_type";
 	public static final String FILE_TYPE_VALUE_XML = "file_type_xml";

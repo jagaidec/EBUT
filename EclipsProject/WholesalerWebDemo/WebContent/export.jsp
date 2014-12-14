@@ -38,7 +38,7 @@
 
 	<form id="download-form" name="catalogDownloadForm" method="post"
 		action="<%=response.encodeURL("controllerservlet") + "?action="
-					+ Constants.DOWNLOAD_CAT%>">
+					+ Constants.EXPORT%>">
 		<span class="label">Filter products by short description:
 			(optional)</span> <input type="text" name="<%=Constants.SEARCH_STRING%>"
 			placeholder="short description" /> <br /> <select
@@ -62,6 +62,8 @@
 			//Files.copy(exportFile, output);
 			output.flush();
 			output.close();
+		} else {
+			//do nothing
 		}
 	%>
 </body>
