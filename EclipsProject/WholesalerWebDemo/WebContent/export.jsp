@@ -47,7 +47,6 @@
 					"attachment;filename='"+ exportFile.getName() +"'");
 			ServletOutputStream outputStream = response.getOutputStream();
 
-			//Files.copy(exportFile, outputStream);
 			Files.copy(exportFile, outputStream);
 			outputStream.flush();
 			outputStream.close();

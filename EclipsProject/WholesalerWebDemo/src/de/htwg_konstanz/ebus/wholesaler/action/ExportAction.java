@@ -27,7 +27,6 @@ public class ExportAction implements IAction {
 		if (loginBean.isLoggedIn() && loginBean != null) {
 			//Used for export with search Words
 			String shortDescription = request.getParameter(Constants.PARAM_SEARCH_STRING);
-			System.out.println(shortDescription + " ExportAction Zeile 30");
 			//Get fileType
 			ExportFormat fileType = Constants.ExportFormat.getExportFormat(request.getParameter(Constants.PARAM_FILE_TYPE));
 

@@ -7,12 +7,12 @@
 	<!-- Default Template -->
 	<xsl:template match="/">
 		<Produktkatalog	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<xsl:attribute name="Generierungsdatum">2014-05-27</xsl:attribute>
+			<xsl:attribute name="Generierungsdatum">2014-12-12</xsl:attribute>
 			<xsl:attribute name="Beschreibung">
 				<xsl:value-of select="BMECAT/HEADER/CATALOG/CATALOG_NAME" />
 			</xsl:attribute>
-			<xsl:attribute name="ErzeugerId">Juergen Waesch</xsl:attribute>
-			<xsl:attribute name="Generierungsdatum">2014-05-27</xsl:attribute>
+			<xsl:attribute name="ErzeugerId">GaideAmbroKopf</xsl:attribute>
+			<xsl:attribute name="Generierungsdatum">2014-12-12</xsl:attribute>
 			<xsl:apply-templates select="BMECAT/T_NEW_CATALOG/ARTICLE" />
 		</Produktkatalog>
 	</xsl:template>
