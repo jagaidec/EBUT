@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<BMECAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2">
+  <HEADER>
+    <CATALOG>
+      <LANGUAGE>deu</LANGUAGE>
+      <CATALOG_ID>GaideAmbroKopf</CATALOG_ID>
+      <CATALOG_VERSION>1.0</CATALOG_VERSION>
+      <CATALOG_NAME>EBUT Catalog 2014</CATALOG_NAME>
+    </CATALOG>
+    <SUPPLIER>
+      <SUPPLIER_NAME>GaideAmbroKopf</SUPPLIER_NAME>
+    </SUPPLIER>
+  </HEADER>
+  <T_NEW_CATALOG>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-penbook-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Pen Book</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>quadratisches Notizbuch inkl. HTWG-Kugelschreiber, 18 x 18 cm</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>8.82</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>htwg-bluse-201</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG Damen Bluse</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>weiße Bluse, am Kragen HTWG-Schmuckelement, gestickt in blauer Farbe</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>37.82</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>htwg-hemd-101</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG Herren Hemd</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>weißes Herren Hemd, am Kragen HTWG-Schmuckelement, gestickt in blauer Farbe</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>37.82</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-pin-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Ansteckpin</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Metallpin mit Logo, Hintergrund weiß</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>1.26</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-blockA4-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Block</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Din A4, blaues Cover, innen Rasterpunkte</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>1.26</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-konmappe-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Konferenzmappe</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>weiße Mappe mit Cyan-logo, innen Cyan-Wellenmuster, breiter Rücken</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>0.63</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-stift-2</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Kugelschreiber</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>hochwertiger Kugelschreiber, Farbe: schwarz / silbern, logo in Cyan-blau</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>0.63</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-stiftebox-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Stiftebox</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Staedtler Stiftebox mit HTWG-Aufkleber, enthält 4 Stifte, aufstellbar</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>2.52</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-uhr-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Uhr</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>International Watch Group Switzerland Damen- und Herrenmodell, Ziffernblatt mit HTWG-Logo, inkl. silberner Präsentbox</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>31.52</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>mer-zeugmappe-1</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>HTWG-Zeugnismappe</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>weiße Mappe mit Cyan-logo, innen Cyan-Wellenmuster, für wenige Blätter</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>0.63</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>3198044</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>MAUI WOWIE Badeshorts Frauen</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Maui Wowie Badeshorts mit Schnürung, 1 Gesäßtasche, Schlüsseltäschchen; Länge ca. 50cm/Gr. 38; aus 100% Polyester.</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>52.43</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>3097266</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>MAUI WOWIE Badeshorts Männer</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Maui Wowie Badeshorts mit Elastikbund und Kordelzug, 2 seitliche Einschubtaschen, 1 Gesäßtasche; Innenslip und Schlüsseltäschchen; Länge ca. 38cm/Gr. L; aus 100% Polyester.</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>52.43</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>837472D</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>MAUI WOWIE Sandale Frauen Flower</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Maui Wowie FLOWER. Zehensandale aus PU und EVA; Fußbett mit floralem Musterprint; Außensohle mit leichtem Rillenprofil.</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>22.43</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>1054746</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Mikasa Beachvolley</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Beachvolleyball von Mikasa, orange/anthrazit</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>29.93</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>368972C</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Protest Bikini</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Protest Bustierbikini mit Neckholderträgern, herausnehmbaren Pads, Bändel im Nacken und Rücken zu binden; Höschen gefüttert, mit wendbarem Gürtel; aus 80% Polyamid, 20% Elastan</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>64.43</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>2783103</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>QUIKSILVER Handtuch</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Strandtuch - Limited Edition Ob Schwimmbad, Sandstrand oder am Baggersee ... mit diesem weichen Strandtuch im attraktiven QUIKSILVER-Logo-Design liegst du überall richtig. Material: 100% Baumwolle Farbe: Blau Größe: L/180 x B/85 cm</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>29.93</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>5656349</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>UVEX Brille Snowsun</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>Uvex SNOWSUN. Perfekt sitzende Sportbrille mit gummierten Bügelenden für optimalen Halt, Innenseite komplett gummiert, schließt dadurch rundherum ab; 100% UV-Schutz, bruch- und kratzfest beschichtet, optisch absolut korrekt.</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>37.43</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>A1111</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Tablet PC</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>10 inch tablet pc</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>599.99</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>599.99</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1900</TAX>
+          <TERRITORY>FR</TERRITORY>
+        </ARTICLE_PRICE>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>749.99</PRICE_AMOUNT>
+          <PRICE_CURRENCY>USD</PRICE_CURRENCY>
+          <TAX>0.1000</TAX>
+          <TERRITORY>US</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>A2222</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Dell Vostro 1310</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>13 inch Dell notebook with intel Core 2 Duo 2.1 GHz</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>1268.99</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1600</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+        <ARTICLE_PRICE price_type="net_list">
+          <PRICE_AMOUNT>1385.99</PRICE_AMOUNT>
+          <PRICE_CURRENCY>USD</PRICE_CURRENCY>
+          <TAX>0.0760</TAX>
+          <TERRITORY>US</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>A3333</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Apple iPhone 4</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>iPhone 4 with 32 GB.</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="gros_list">
+          <PRICE_AMOUNT>1275.74</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1600</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+        <ARTICLE_PRICE price_type="gros_list">
+          <PRICE_AMOUNT>1333.49</PRICE_AMOUNT>
+          <PRICE_CURRENCY>USD</PRICE_CURRENCY>
+          <TAX>0.0760</TAX>
+          <TERRITORY>US</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+    <ARTICLE>
+      <SUPPLIER_AID>A4444</SUPPLIER_AID>
+      <ARTICLE_DETAILS>
+        <DESCRIPTION_SHORT>Playstation 3 Slim Edition</DESCRIPTION_SHORT>
+        <DESCRIPTION_LONG>PS3 Slim Edition with 320 GB incl 1 wireless controller</DESCRIPTION_LONG>
+      </ARTICLE_DETAILS>
+      <ARTICLE_ORDER_DETAILS>
+        <ORDER_UNIT>C62</ORDER_UNIT>
+        <CONTENT_UNIT>04</CONTENT_UNIT>
+        <NO_CU_PER_OU>1</NO_CU_PER_OU>
+      </ARTICLE_ORDER_DETAILS>
+      <ARTICLE_PRICE_DETAILS>
+        <ARTICLE_PRICE price_type="gros_list">
+          <PRICE_AMOUNT>478.50</PRICE_AMOUNT>
+          <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+          <TAX>0.1600</TAX>
+          <TERRITORY>DE</TERRITORY>
+        </ARTICLE_PRICE>
+        <ARTICLE_PRICE price_type="gros_list">
+          <PRICE_AMOUNT>523.50</PRICE_AMOUNT>
+          <PRICE_CURRENCY>USD</PRICE_CURRENCY>
+          <TAX>0.0760</TAX>
+          <TERRITORY>US</TERRITORY>
+        </ARTICLE_PRICE>
+      </ARTICLE_PRICE_DETAILS>
+    </ARTICLE>
+  </T_NEW_CATALOG>
+</BMECAT>

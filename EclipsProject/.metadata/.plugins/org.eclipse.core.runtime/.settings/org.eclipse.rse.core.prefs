@@ -1,4 +1,4 @@
-activeuserprofiles=PC;Team
+activeuserprofiles=HP_DV6;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=Fabian
-useridperkey=PC.Local\=Fabian;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=Jan
+useridperkey=HP_DV6.Local\=Jan;

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Product catalog</title>
+    <style type="text/css">
+					body {
+						font-family: Arial, Helvetica;
+					}
+					</style>
+  </head>
+  <body>
+    <h1 align="center">Product catalog</h1>
+    <p align="center">
+			Generated:
+			2014-12-12</p>
+    <p align="center">
+			Producer:
+			GaideAmbroKopf</p>
+    <p align="center">
+			Name:
+			EBUT Catalog 2014</p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-penbook-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Pen Book<br/>
+      <label>
+        <b>Long description: </b>
+      </label>quadratisches Notizbuch inkl. HTWG-Kugelschreiber, 18 x 18 cm<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 8.82EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>htwg-bluse-201<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG Damen Bluse<br/>
+      <label>
+        <b>Long description: </b>
+      </label>weiße Bluse, am Kragen HTWG-Schmuckelement, gestickt in blauer Farbe<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 37.82EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>htwg-hemd-101<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG Herren Hemd<br/>
+      <label>
+        <b>Long description: </b>
+      </label>weißes Herren Hemd, am Kragen HTWG-Schmuckelement, gestickt in blauer Farbe<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 37.82EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-pin-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Ansteckpin<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Metallpin mit Logo, Hintergrund weiß<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 1.26EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-blockA4-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Block<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Din A4, blaues Cover, innen Rasterpunkte<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 1.26EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-konmappe-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Konferenzmappe<br/>
+      <label>
+        <b>Long description: </b>
+      </label>weiße Mappe mit Cyan-logo, innen Cyan-Wellenmuster, breiter Rücken<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 0.63EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-stift-2<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Kugelschreiber<br/>
+      <label>
+        <b>Long description: </b>
+      </label>hochwertiger Kugelschreiber, Farbe: schwarz / silbern, logo in Cyan-blau<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 0.63EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-stiftebox-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Stiftebox<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Staedtler Stiftebox mit HTWG-Aufkleber, enthält 4 Stifte, aufstellbar<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 2.52EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-uhr-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Uhr<br/>
+      <label>
+        <b>Long description: </b>
+      </label>International Watch Group Switzerland Damen- und Herrenmodell, Ziffernblatt mit HTWG-Logo, inkl. silberner Präsentbox<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 31.52EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>mer-zeugmappe-1<br/>
+      <label>
+        <b>Description:</b>
+      </label>HTWG-Zeugnismappe<br/>
+      <label>
+        <b>Long description: </b>
+      </label>weiße Mappe mit Cyan-logo, innen Cyan-Wellenmuster, für wenige Blätter<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 0.63EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>3198044<br/>
+      <label>
+        <b>Description:</b>
+      </label>MAUI WOWIE Badeshorts Frauen<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Maui Wowie Badeshorts mit Schnürung, 1 Gesäßtasche, Schlüsseltäschchen; Länge ca. 50cm/Gr. 38; aus 100% Polyester.<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 52.43EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>3097266<br/>
+      <label>
+        <b>Description:</b>
+      </label>MAUI WOWIE Badeshorts Männer<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Maui Wowie Badeshorts mit Elastikbund und Kordelzug, 2 seitliche Einschubtaschen, 1 Gesäßtasche; Innenslip und Schlüsseltäschchen; Länge ca. 38cm/Gr. L; aus 100% Polyester.<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 52.43EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>837472D<br/>
+      <label>
+        <b>Description:</b>
+      </label>MAUI WOWIE Sandale Frauen Flower<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Maui Wowie FLOWER. Zehensandale aus PU und EVA; Fußbett mit floralem Musterprint; Außensohle mit leichtem Rillenprofil.<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 22.43EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>1054746<br/>
+      <label>
+        <b>Description:</b>
+      </label>Mikasa Beachvolley<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Beachvolleyball von Mikasa, orange/anthrazit<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 29.93EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>368972C<br/>
+      <label>
+        <b>Description:</b>
+      </label>Protest Bikini<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Protest Bustierbikini mit Neckholderträgern, herausnehmbaren Pads, Bändel im Nacken und Rücken zu binden; Höschen gefüttert, mit wendbarem Gürtel; aus 80% Polyamid, 20% Elastan<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 64.43EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>2783103<br/>
+      <label>
+        <b>Description:</b>
+      </label>QUIKSILVER Handtuch<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Strandtuch - Limited Edition Ob Schwimmbad, Sandstrand oder am Baggersee ... mit diesem weichen Strandtuch im attraktiven QUIKSILVER-Logo-Design liegst du überall richtig. Material: 100% Baumwolle Farbe: Blau Größe: L/180 x B/85 cm<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 29.93EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>5656349<br/>
+      <label>
+        <b>Description:</b>
+      </label>UVEX Brille Snowsun<br/>
+      <label>
+        <b>Long description: </b>
+      </label>Uvex SNOWSUN. Perfekt sitzende Sportbrille mit gummierten Bügelenden für optimalen Halt, Innenseite komplett gummiert, schließt dadurch rundherum ab; 100% UV-Schutz, bruch- und kratzfest beschichtet, optisch absolut korrekt.<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 37.43EUR</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>A1111<br/>
+      <label>
+        <b>Description:</b>
+      </label>Tablet PC<br/>
+      <label>
+        <b>Long description: </b>
+      </label>10 inch tablet pc<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 19%</label>
+        <label>PRICE: 599.99EUR</label>
+        <label>FR, TAX: 19%</label>
+        <label>PRICE: 599.99EUR</label>
+        <label>US, TAX: 10%</label>
+        <label>PRICE: 749.99USD</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>A2222<br/>
+      <label>
+        <b>Description:</b>
+      </label>Dell Vostro 1310<br/>
+      <label>
+        <b>Long description: </b>
+      </label>13 inch Dell notebook with intel Core 2 Duo 2.1 GHz<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 16%</label>
+        <label>PRICE: 1268.99EUR</label>
+        <label>US, TAX: 7.6%</label>
+        <label>PRICE: 1385.99USD</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>A3333<br/>
+      <label>
+        <b>Description:</b>
+      </label>Apple iPhone 4<br/>
+      <label>
+        <b>Long description: </b>
+      </label>iPhone 4 with 32 GB.<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 16%</label>
+        <label>PRICE: 1275.74EUR</label>
+        <label>US, TAX: 7.6%</label>
+        <label>PRICE: 1333.49USD</label>
+      </label>
+    </p>
+    <hr/>
+    <p>
+      <label>
+        <b>Article No:</b>
+      </label>A4444<br/>
+      <label>
+        <b>Description:</b>
+      </label>Playstation 3 Slim Edition<br/>
+      <label>
+        <b>Long description: </b>
+      </label>PS3 Slim Edition with 320 GB incl 1 wireless controller<br/>
+      <label>
+        <b>Country pricing:</b>
+      </label>
+      <label>
+        <label>DE, TAX: 16%</label>
+        <label>PRICE: 478.50EUR</label>
+        <label>US, TAX: 7.6%</label>
+        <label>PRICE: 523.50USD</label>
+      </label>
+    </p>
+    <hr/>
+  </body>
+</html>

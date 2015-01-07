@@ -1,0 +1,297 @@
+package de.htwg_konstanz.ebus.wholesaler.main;
+
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
+
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOCountry;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOProduct;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOPurchasePrice;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSalesPrice;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.bo.BOSupplier;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.CountryBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.PriceBOA;
+import de.htwg_konstanz.ebus.framework.wholesaler.api.boa.ProductBOA;
+import de.htwg_konstanz.ebus.wholesaler.demo.util.Constants;
+import de.htwg_konstanz.ebus.wholesaler.exceptions.DocumentNotValidException;
+
+public class Import {
+	private final String CLASS_NAME = getClass().getName();
+	private final Logger log = Logger.getLogger(CLASS_NAME);
+	private final Handler handler = new ConsoleHandler();
+	private BOSupplier supplier = null;
+	// products written in db
+	private static int productCount;
+	// products already in db
+	private static int productInDbCount;
+
+	public Import() {
+		log.addHandler(handler);
+	}
+
+	private BOProduct getProductfromStore(BOSupplier supplier,
+			String orderNumber) {
+		BOProduct searchedProduct = null;
+		BOProduct existingProduct = ProductBOA.getInstance()
+				.findByOrderNumberSupplier(orderNumber);
+
+		if (existingProduct != null) {
+			log.info("Product is already existing!");
+			productInDbCount++;
+
+			existingProduct.setLongDescription(null);
+			existingProduct.setLongDescriptionCustomer(null);
+			searchedProduct = existingProduct;
+
+		} else {
+			log.info("Product " + orderNumber
+					+ " does not exist. Will be created for store!");
+			productCount++;
+			searchedProduct = new BOProduct();
+			searchedProduct.setOrderNumberSupplier(orderNumber);
+			searchedProduct.setOrderNumberCustomer(orderNumber);
+		}
+		return searchedProduct;
+	}
+
+	private String getSupplierAID(Node currentNode) {
+		log.entering(CLASS_NAME, "getSupplierAID");
+		String supplierAID = null;
+		while (currentNode != null) {
+
+			if (currentNode.getNodeName().equals(Constants.SUPPLIER_AID)) {
+				supplierAID = currentNode.getFirstChild().getNodeValue();
+				break;
+
+			} else {
+				currentNode = currentNode.getNextSibling();
+			}
+		}
+		log.exiting(CLASS_NAME, "getSupplierAID");
+		return supplierAID;
+	}
+
+	public String uploadFile(InputStream file) throws DocumentNotValidException {
+		log.entering(CLASS_NAME, "uploadFile");
+		String ret = "";
+		// create W3C DOM Document
+		org.w3c.dom.Document document = new ImportW3CDocuments()
+				.Fuc_ImportW3CDocuments(file);
+
+		// check result of Function createDocumentFromFile()
+		// null= not an XML doc or XML not well formed
+		if (document == null) {
+			ret = "Your XML could not be parsed because it is not well-formed or it is not a XML File. Please check your File!";
+			log.warning(ret);
+			throw new DocumentNotValidException(ret);
+			// else doc is well formed
+		} else {
+			// validate doc
+			Boolean val = new ImportValidateDocument()
+					.Fuc_ImportValidateDocument(document);
+			// check result; true= doc is valid; false= Error in function
+			if (val == true) {
+				// get supplier from doc
+				supplier = new ImportSupplier().getSupplier(document);
+				if (supplier != null) {
+					// run importArticles function
+					importArticles(document);
+					ret = "Upload or update successfull! Uploaded Products: " + productCount + " Products already in Database: " + productInDbCount;
+					
+				} else {
+					// supplier = Null --> can not import Articles
+					ret = "Cannot Import Document, no such supplier in Database!";
+					log.warning(ret);
+					throw new DocumentNotValidException(ret);
+				}
+			}
+		}
+		log.exiting(CLASS_NAME, "uploadFile");
+		return ret;
+	}
+
+	private void importArticles(org.w3c.dom.Document document) {
+		log.entering(CLASS_NAME, "importArticles");
+
+		BOProduct importedProduct;
+
+		NodeList articles = document.getElementsByTagName(Constants.ARTICLE);
+		HashSet<BOPurchasePrice> priceList = null;
+		productCount = 0;
+		productInDbCount = 0;
+		for (int i = 0; i < articles.getLength(); i++) {
+			
+			importedProduct = getProductfromStore(supplier,
+					getSupplierAID(articles.item(i).getFirstChild()));
+			importedProduct.setSupplier(supplier);
+			Node importedProductContent = articles.item(i).getFirstChild();
+
+			while (importedProductContent != null) {
+				if (importedProductContent.getNodeName().equals(
+						Constants.ARTICLE_DETAILS)) {
+					setArticleDetails(importedProductContent, importedProduct);
+				}
+				if (importedProductContent.getNodeName().equals(
+						Constants.ARTICLE_PRICE_DETAILS)) {
+					priceList = getArticlePriceDetails(importedProductContent);
+				}
+				// There is no need to read ARTICLE_ORDER_DETAILS
+				importedProductContent = importedProductContent
+						.getNextSibling();
+			}
+			saveArticle(importedProduct, priceList);
+		}
+		log.exiting(CLASS_NAME, "importArticles");
+	}
+
+	private BOPurchasePrice getArticlePrice(Node articlePrice) {
+		log.entering(CLASS_NAME, "getArticlePrice");
+
+		BOPurchasePrice price = new BOPurchasePrice();
+		NamedNodeMap attributes = articlePrice.getAttributes();
+		Node priceType = attributes.getNamedItem(Constants.PRICE_TYPE);
+		price.setPricetype(priceType.getNodeValue());
+		Node currentNode = articlePrice.getFirstChild();
+
+		while (currentNode != null) {
+			if (currentNode.getNodeName().equals(Constants.PRICE_AMOUNT)) {
+				BigDecimal amount = new BigDecimal(currentNode.getFirstChild()
+						.getNodeValue());
+				price.setAmount(amount);
+			}
+			if (currentNode.getNodeName().equals(Constants.TAX)) {
+				BigDecimal taxes = new BigDecimal(currentNode.getFirstChild()
+						.getNodeValue());
+				price.setTaxrate(taxes);
+			}
+			currentNode = currentNode.getNextSibling();
+		}
+		log.exiting(CLASS_NAME, "getArticlePrice");
+		return price;
+	}
+
+	private HashSet<BOCountry> getArticleCountries(Node articlePrice) {
+		log.entering(CLASS_NAME, "getArticleCountries");
+
+		Node currentNode = articlePrice.getFirstChild();
+		HashSet<BOCountry> countries = new HashSet<BOCountry>();
+
+		while (currentNode != null) {
+			if (currentNode.getNodeName().equals(Constants.TERRITORY)) {
+				BOCountry country = CountryBOA.getInstance().findCountry(
+						currentNode.getFirstChild().getNodeValue());
+				countries.add(country);
+			}
+			currentNode = currentNode.getNextSibling();
+		}
+		log.exiting(CLASS_NAME, "getArticleCountries");
+		return countries;
+	}
+
+	private void saveArticle(BOProduct product,
+			HashSet<BOPurchasePrice> purchasePriceList) {
+		log.entering(CLASS_NAME, "saveArticle");
+
+		ProductBOA.getInstance().saveOrUpdate(product);
+		PriceBOA price = PriceBOA.getInstance();
+		BOSalesPrice salesPrice;
+
+		for (BOPurchasePrice purchasePrice : purchasePriceList) {
+			purchasePrice.setProduct(product);
+			// Set default LowerboundScaledPrice
+			purchasePrice.setLowerboundScaledprice(1);
+			salesPrice = calcSalesPrice(purchasePrice);
+			salesPrice.setProduct(product);
+			price.saveOrUpdatePurchasePrice(purchasePrice);
+			price.saveOrUpdate(salesPrice);
+		}
+		log.exiting(CLASS_NAME, "saveArticle");
+	}
+
+	private HashSet<BOPurchasePrice> getArticlePriceDetails(
+			Node importedProductContent) {
+		log.entering(CLASS_NAME, "getArticlePriceDetails");
+
+		Node currentArticlePriceNode = importedProductContent.getFirstChild();
+		HashSet<BOPurchasePrice> purchasePriceList = new HashSet<BOPurchasePrice>();
+
+		while (currentArticlePriceNode != null) {
+			if (currentArticlePriceNode.getNodeName().equals(
+					Constants.ARTICLE_PRICE)) {
+				BOPurchasePrice purchasePrice = getArticlePrice(currentArticlePriceNode);
+				HashSet<BOCountry> countryList = getArticleCountries(currentArticlePriceNode);
+
+				// One Price for every single Country
+				for (BOCountry boCountry : countryList) {
+					BOPurchasePrice purchasePriceForCountry = new BOPurchasePrice();
+					purchasePriceForCountry.setPricetype(purchasePrice
+							.getPricetype());
+					purchasePriceForCountry
+							.setAmount(purchasePrice.getAmount());
+					purchasePriceForCountry.setTaxrate(purchasePrice
+							.getTaxrate());
+					purchasePriceForCountry.setCountry(boCountry);
+					purchasePriceList.add(purchasePriceForCountry);
+				}
+			}
+			currentArticlePriceNode = currentArticlePriceNode.getNextSibling();
+		}
+		log.exiting(CLASS_NAME, "getArticlePriceDetails");
+		return purchasePriceList;
+	}
+
+	private void setArticleDetails(Node articleDetails,
+			BOProduct importedProduct) {
+		log.entering(CLASS_NAME, "setArticleDetails");
+
+		Node currentNode = articleDetails.getFirstChild();
+
+		while (currentNode != null) {
+			if (currentNode.getNodeName().equals(Constants.DESCRIPTION_SHORT)) {
+				importedProduct.setShortDescription(currentNode.getFirstChild()
+						.getNodeValue());
+				importedProduct.setShortDescriptionCustomer(currentNode
+						.getFirstChild().getNodeValue());
+			}
+			if (currentNode.getNodeName().equalsIgnoreCase(
+					Constants.DESCRIPTION_LONG)) {
+				importedProduct.setLongDescription(currentNode.getFirstChild()
+						.getNodeValue());
+				importedProduct.setLongDescriptionCustomer(currentNode
+						.getFirstChild().getNodeValue());
+			}
+			if (currentNode.getNodeName().equals(
+					Constants.MANUFACTURER_TYPE_DESCR)) {
+				importedProduct.setManufacturerTypeDescription(currentNode
+						.getFirstChild().getNodeValue());
+			}
+			currentNode = currentNode.getNextSibling();
+		}
+		log.exiting(CLASS_NAME, "setArticleDetails");
+	}
+
+	private BOSalesPrice calcSalesPrice(BOPurchasePrice purchasePrice) {
+		log.entering(CLASS_NAME, "calcSalesPrice");
+
+		BOSalesPrice salesPrice = new BOSalesPrice();
+		salesPrice.setAmount(purchasePrice.getAmount().multiply(
+				Constants.SALESPRICE_MULTIPLIER));
+		salesPrice.setCountry(purchasePrice.getCountry());
+		salesPrice.setLowerboundScaledprice(purchasePrice
+				.getLowerboundScaledprice());
+		salesPrice.setPricetype(purchasePrice.getPricetype());
+		salesPrice.setTaxrate(purchasePrice.getTaxrate());
+		salesPrice.setProduct(purchasePrice.getProduct());
+
+		log.exiting(CLASS_NAME, "calcSalesPrice");
+		return salesPrice;
+	}
+
+}
