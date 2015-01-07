@@ -5,7 +5,12 @@
 	targetNamespace="http://www.example.org/updateCatalog/">
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://www.example.org/updateCatalog/">
-			<xsd:complexType name="price">
+			
+			<xsd:element name="authentification" type="xsd:string" />
+			<xsd:element name="request" type="tns:updateRequestType" />
+			<xsd:element name="response" type="tns:updateResponseType" />
+			
+			<xsd:complexType name="priceType">
 				<xsd:sequence>
 					<xsd:element name="amount" type="xsd:decimal"
 						minOccurs="1" maxOccurs="1" />
@@ -22,7 +27,7 @@
 				</xsd:sequence>
 			</xsd:complexType>
 
-			<xsd:complexType name="supplierProduct">
+			<xsd:complexType name="supplierProductType">
 				<xsd:sequence>
 					<xsd:element name="supplierAID" type="xsd:string"
 						minOccurs="1" maxOccurs="1" />
@@ -30,12 +35,12 @@
 						minOccurs="1" maxOccurs="1" />
 					<xsd:element name="longDescription" type="xsd:string"
 						minOccurs="0" maxOccurs="1" />
-					<xsd:element name="price" type="tns:price" minOccurs="1"
+					<xsd:element name="price" type="tns:priceType" minOccurs="1"
 						maxOccurs="unbounded" />
 				</xsd:sequence>
 			</xsd:complexType>
 
-			<xsd:complexType name="authentication">
+			<xsd:complexType name="authenticationType">
 				<xsd:sequence>
 					<xsd:element name="wholesalerName" type="xsd:string"
 						minOccurs="1" maxOccurs="1" />
@@ -46,44 +51,40 @@
 				</xsd:sequence>
 			</xsd:complexType>
 
-			<xsd:complexType name="listOfProducts">
+			<xsd:complexType name="listOfProductsType">
 				<xsd:sequence>
-					<xsd:element name="supplierProduct" type="tns:supplierProduct"
+					<xsd:element name="supplierProduct" type="tns:supplierProductType"
 						minOccurs="1" maxOccurs="unbounded" />
 				</xsd:sequence>
 			</xsd:complexType>
-			<xsd:complexType name="listOfUpdatedProducts">
+			<xsd:complexType name="listOfUpdatedProductsType">
 				<xsd:sequence>
-					<xsd:element name="changedProducts" type="tns:supplierProduct"
+					<xsd:element name="changedProducts" type="tns:supplierProductType"
 						minOccurs="1" maxOccurs="1" />
 				</xsd:sequence>
 			</xsd:complexType>
-			<xsd:complexType name="listOfUnavailableProducts">
+			<xsd:complexType name="listOfUnavailableProductsType">
 				<xsd:sequence>
-					<xsd:element name="supplierProduct" type="tns:supplierProduct"
+					<xsd:element name="supplierProduct" type="tns:supplierProductType"
 						minOccurs="1" maxOccurs="1" />
 				</xsd:sequence>
 			</xsd:complexType>
-
-			<xsd:element name="authentification" type="xsd:string" />
-			<xsd:element name="request" type="tns:updateRequestType" />
+			
+			
 			<xsd:complexType name="updateRequestType">
 				<xsd:sequence>
-					<xsd:element name="authentication" type="tns:authentication" />
-					<xsd:element name="listOfProducts" type="tns:listOfProducts" />
+					<xsd:element name="authentication" type="tns:authenticationType" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="listOfProducts" type="tns:listOfProductsType" minOccurs="1" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:complexType>
-
-
-
-			<xsd:element name="response" type="tns:updateResponseType" />
+			
 			<xsd:complexType name="updateResponseType">
 				<xsd:sequence>
 					<xsd:element name="updateDate" type="xsd:date"
 						minOccurs="1" maxOccurs="1" />
-					<xsd:element name="listOfUpdatedProducts" type="tns:listOfUpdatedProducts"
+					<xsd:element name="listOfUpdatedProducts" type="tns:listOfUpdatedProductsType"
 						minOccurs="1" maxOccurs="1" />
-					<xsd:element name="listOfUnavaiableProducts" type="tns:listOfUnavailableProducts"
+					<xsd:element name="listOfUnavaiableProducts" type="tns:listOfUnavailableProductsType"
 						minOccurs="1" maxOccurs="1" />
 				</xsd:sequence>
 			</xsd:complexType>
@@ -113,7 +114,7 @@
 		<soap:binding style="document"
 			transport="http://schemas.xmlsoap.org/soap/http" />
 		<wsdl:operation name="updateCatalog">
-			<soap:operation soapAction="http://www.ebut.de/updateCatalog/updateCatalog"></soap:operation>
+			<soap:operation soapAction="http://www.example.org/updateCatalog/updateCatalog"></soap:operation>
 			<wsdl:input>
 				<soap:body use="literal"></soap:body>
 			</wsdl:input>
