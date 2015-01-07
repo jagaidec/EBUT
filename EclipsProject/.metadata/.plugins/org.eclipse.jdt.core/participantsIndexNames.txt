@@ -1,5 +1,0 @@
-INDEX VERSION 1.127
-C:\Users\Fabian\Documents\EBUT\EBUT\EclipsProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3919090774.index
-\WholesalerWebDemo\src
-C:\Users\Fabian\Documents\EBUT\EBUT\EclipsProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\667350366.index
-\WholesalerWebDemo\src
