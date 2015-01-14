@@ -12,6 +12,6 @@
 	<endpoint name="UpdateCatalogService"
 		interface="de.htwg_konstanz.ebus.wholesaler.ws.updateCatalog.UpdateCatalog"
 		implementation="de.htwg_konstanz.ebus.wholesaler.ws.updateCatalog.UpdateCatalogServiceImpl"
-		url-pattern="/UpdatecatalogService"/>
+		url-pattern="/UpdateCatalogService"/>
 </endpoints>
 	

@@ -23,6 +23,7 @@
    else if(loginBean.getRole() == Constants.USER_SUPPLIER)
    {	
 %>
+	<a href="<%= response.encodeURL("updaterSelectSupplier.jsp") %>"><img alt="updaterSelectSupplier" title="updaterSelectSupplier" border="0" src="images/buttons/catalog.png">&nbsp;Update Service</a>
 	<a href="<%= response.encodeURL("controllerservlet?action="+Constants.ACTION_READ_WS_SETTINGS) %>"><img alt="Preferences" title="Preferences" border="0" src="images/buttons/configure.png">&nbsp;Preferences</a>
  	<a href="<%= response.encodeURL("export.jsp") %>"><img alt="Export" title="Export" border="0" src="images/buttons/export.png">&nbsp;Export</a>&nbsp;&nbsp;
  	 <%

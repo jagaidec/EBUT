@@ -27,7 +27,7 @@ public class ImportAction implements IAction {
 
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response, ArrayList<String> errorList) {
-
+		
 		// get the login bean from the session
 		LoginBean loginBean = (LoginBean) request.getSession(true)
 				.getAttribute(Constants.PARAM_LOGIN_BEAN);

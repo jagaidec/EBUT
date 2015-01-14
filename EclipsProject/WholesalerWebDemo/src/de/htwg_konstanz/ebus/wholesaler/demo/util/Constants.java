@@ -141,5 +141,7 @@ public class Constants {
 	public static final String ELEMENT_ARTICLE = "ARTICLE";
 	public static final String ELEMENT_SUPPLIER_AID = "SUPPLIER_AID";
 	public static final String ELEMENT_ARTICLE_DETAILS = "ARTICLE_DETAILS";
+	
+	public static final String ACTION_UpdaterSelectSupplier = "updaterSelectSupplier";
 
 }
